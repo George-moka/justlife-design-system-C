@@ -1,0 +1,35 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as NumberSelectorStories from './NumberSelector.stories';
+
+<Meta of={NumberSelectorStories} />
+
+# NumberSelector
+
+## Purpose
+
+A horizontal row of single-select **number chips** (`min`…`count`) — for picking a count such as the number
+of hours or professionals on the booking funnel.
+
+## Usage
+
+- Pass `count` (and optional `min`, default 1), the selected `value`, and `onChange`.
+- Composes `Selectable`; scrolls horizontally and owns its side inset.
+
+<Canvas of={NumberSelectorStories.Hours} />
+
+## Do not use
+
+- ❌ For incrementing a quantity with − / + buttons — that's `QuantityStepper`.
+- ❌ For non-numeric options — that's `PillGroup`.
+
+## States
+
+Per-chip: default · selected (brand fill). Single-select across the row.
+
+## Accessibility
+
+Each number is a `Selectable` button labelled by its value.
+
+## Tokens used
+
+`size.40` (chip) · `size.8` (gap) · `space.md` · plus `Selectable`’s tokens.

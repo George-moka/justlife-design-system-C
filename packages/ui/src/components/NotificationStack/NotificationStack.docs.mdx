@@ -1,0 +1,69 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as NotificationStackStories from './NotificationStack.stories';
+
+<Meta of={NotificationStackStories} />
+
+# NotificationStack
+
+## Purpose
+
+Several notifications can be true at the same time — a failed payment, a booking that needs input,
+tomorrow's cleaner, a weather advisory, a new message. Rendering them all pushes the actual page below
+the fold, and the page's height starts changing with whatever the backend happens to be saying that day.
+
+`NotificationStack` shows **one** live banner with the rest as tinted peek slivers behind it, plus a
+quiet "N more" toggle. Home's height stops depending on the notification count, and the notice the user
+must act on is never buried.
+
+<Canvas of={NotificationStackStories.Collapsed} />
+
+## Usage
+
+- Pass `items` in **priority order**. `items[0]` is the one the user sees while the deck is collapsed,
+  so rank by what breaks if ignored — not by arrival time. The stack does not sort for you.
+- The top card stays **fully live** while collapsed: its own chevron or close button still works, so the
+  most urgent thing is one tap from being fixed without expanding anything.
+- Dismissal is the caller's: remove the item from `items` and the deck restacks.
+- `expanded` / `onExpandedChange` make it controlled; omit both and the stack owns its state.
+
+<Canvas of={NotificationStackStories.Expanded} />
+
+## Do not use
+
+- ❌ For the notifications **screen** — that's a plain list of `NotificationCard`s.
+- ❌ With unranked items. A deck whose top card is an offer while a failed payment hides behind it is
+  worse than no deck at all.
+- ❌ With more than a handful. If the list is routinely long, it belongs on its own screen.
+
+## States
+
+One notice (a plain banner, no deck) · two or more (deck + toggle) · expanded (full list + "Show less").
+`maxPeek` caps how many slivers show; the count in the toggle always reflects everything hidden.
+
+<Canvas of={NotificationStackStories.SingleNotice} />
+
+<Controls />
+
+## Accessibility
+
+- The toggle is a `button` labelled "Show N more notifications" / "Show fewer notifications", carrying
+  `accessibilityState={{ expanded }}`.
+- The peek slivers are tappable too (so the deck expands without a precise hit on the toggle) but stay
+  **out of the a11y tree** — repeating the same label three times would only add noise.
+- Every banner keeps its own roles and labels in both states.
+
+## Motion
+
+Expanding and collapsing run through `LayoutAnimation` at `motion.duration.medium` with an ease-in-out
+curve, and are **skipped entirely** when the OS asks to reduce motion (`useReducedMotion`, rule #35).
+
+## Tokens
+
+| Aspect | Token |
+| --- | --- |
+| Peek depth per layer | `space.xs` (4), reserved as bottom margin (rule #41) |
+| Peek inset per layer | `space.sm` (8) each side |
+| Sliver fill | the tone's own tint (`background.error` · `notification.bg.warning` · `background.tertiary` · `background.selected`) |
+| Sliver edge | `borderWidth.hairline` · `border.default` |
+| Gap between expanded banners | `space.sm` |
+| Toggle | `labelXSmall` · `text.secondary` · `icon.secondary` · `space.sm` top padding |

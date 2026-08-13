@@ -1,0 +1,75 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as NotificationBannerStories from './NotificationBanner.stories';
+
+<Meta of={NotificationBannerStories} />
+
+# NotificationBanner
+
+## Purpose
+
+`NotificationBanner` is the tinted strip Home shows between the hero and the feed. It tells the user
+**one** thing that is true right now — a payment to fix, a professional swap, tomorrow's booking, a
+weather advisory, a new message, an offer — and gives them exactly one way to act on it.
+
+<Canvas of={NotificationBannerStories.AllVariants} />
+
+## Usage
+
+- Pick the tone by **urgency, not by topic**: `danger` for something that will break if ignored,
+  `warning` for a change the user should know about, `neutral` for an update, `brand` for an offer.
+- Write it as **two runs**: `message` is the regular lead-in, `emphasis` is the semibold part that
+  carries the point. Set `emphasisFirst` when the headline comes first and the detail follows.
+- `leading` replaces the icon with a lockup (a payment provider's logo).
+
+## The trailing affordance matches the behaviour
+
+| The notice | Trailing | Why |
+| --- | --- | --- |
+| Must be resolved (failed payment, action required) | chevron via `onPress` | Tapping takes you to the fix; there is no "close", because closing it would not make it untrue. |
+| Dismissible (a message, an offer, tomorrow's booking) | close button via `onDismiss` | The user can decide it's handled. |
+| Passive advisory (weather) | none | Nothing to open and nothing to dismiss — it expires by itself. |
+
+Giving one banner both a chevron and a close button is the one combination to avoid: two trailing marks
+read as two different actions. When a banner is both tappable and dismissible, the close button owns the
+corner and the rest of the row stays the tap target.
+
+## Do not use
+
+- ❌ For transient feedback after an action — use a Toast.
+- ❌ For the notifications **list** screen — that's `NotificationCard` (avatar, timestamp, unread dot).
+- ❌ For static explanatory copy inside a form or card — that's `InfoCard`.
+- ❌ Stacked five deep on Home. Rank them and collapse the rest.
+
+## States
+
+Default · pressed (the whole row dims) · unread (a dot on the leading icon) · with a logo instead of an
+icon. All four tones share one geometry, so a column of banners is a set of **equal-height rows**
+(rule #7) even when one wraps to two lines and another doesn't.
+
+<Canvas of={NotificationBannerStories.NewMessage} />
+
+<Controls />
+
+## Accessibility
+
+- A tappable banner is a `button` labelled with its full sentence (both runs), so the label doesn't
+  depend on the visual split.
+- The close button is a separate `button` labelled **"Dismiss notification"** (override per notice with
+  `dismissLabel`), with `space.sm` of hit slop.
+- A passive advisory renders as a plain view — it is not announced as actionable.
+
+## Tokens
+
+| Aspect | Token |
+| --- | --- |
+| Corner radius | `radius.default` (12) |
+| Padding | `space.md` horizontal · `size.12` vertical |
+| Minimum height | `touchTarget.comfortable` (56) |
+| Icon / gap | `iconSize.lg` (24) · `space.md` |
+| Text | `bodyXSmall` (regular run) + `labelXSmall` (semibold run) |
+| Trailing mark | `iconSize.sm` (16) |
+| `danger` | `background.error` · `text.error` · `icon.error` |
+| `warning` | `notification.bg.warning` · `notification.text.warning` · `icon.info` |
+| `neutral` | `background.tertiary` · `text.primary` · `icon.brand` (trailing `icon.secondary`) |
+| `brand` | `background.selected` · `text.promo-dark` · `icon.brand` |
+| Unread dot | `size.8` · `background.error-solid` · `radius.pill` |

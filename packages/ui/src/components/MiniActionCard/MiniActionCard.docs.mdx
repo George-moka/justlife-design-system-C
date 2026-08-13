@@ -1,0 +1,41 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as MiniActionCardStories from './MiniActionCard.stories';
+
+<Meta of={MiniActionCardStories} />
+
+# MiniActionCard
+
+## Purpose
+
+A slim, equal-height **action tile** designed to sit in a row — e.g. the checkout Voucher + Wallet pair. One
+component, two states: **default** (a caption + an action link) and **applied** (a caption + an entered
+`value` + a ✕ to clear it, in the selected treatment).
+
+## Usage
+
+- Default: `label` + `action` (link text) + `onPress`.
+- Applied: also pass `value` (and `onRemove`); the card switches to the brand-outlined selected look with a
+  ✕. Toggle a slot by passing `value={x || undefined}`.
+- It's `flex: 1` — wrap siblings in an `HStack` to split the row evenly.
+
+<Canvas of={MiniActionCardStories.VoucherAndWallet} />
+
+## Do not use
+
+- ❌ As a full-width voucher input — that's `VoucherCodeCard`.
+- ❌ For a tappable settings row — that's `ListRow`.
+
+## States
+
+Default (bordered, caption + link) · applied (selected fill + brand border, caption + value + ✕) · pressed
+(link / ✕ dim).
+
+## Accessibility
+
+The action link and ✕ are labelled buttons (`action` text, and `removeLabel` for the ✕).
+
+## Tokens used
+
+`size.72` (min height) · `size.24` (✕ clearance) · `space.md` / `space.sm` · `borderWidth.default` ·
+`border.brandDefault` · `background.selected` · `icon.secondary` · text roles `bodyXSmall` / `labelBase` /
+`labelXSmall`.
