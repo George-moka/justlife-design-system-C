@@ -1,0 +1,58 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as ListRowStories from './ListRow.stories';
+
+<Meta of={ListRowStories} />
+
+# ListRow
+
+## Purpose
+
+`ListRow` is a clean, full-width **settings/menu row** for a white card surface: a leading icon, a
+label, an optional trailing value / count badge / custom control, and a chevron. Stacked inside a
+`Card` it forms a grouped menu (account, settings, support).
+
+## Usage
+
+- Put rows inside a `Card padded={false}` and set `divider` on every row **except the last**.
+- `value` shows a current setting on the right; `badge` shows a count; `trailing` replaces the whole
+  trailing area (e.g. a `Toggle`).
+- `destructive` styles a row red (icon + label) for actions like "Log out".
+
+<Canvas of={ListRowStories.Grouped} />
+
+## Do not use
+
+- ❌ As a heavy standalone action block — that's `ActionRow` (grey filled, for stacked one-off actions).
+- ❌ On the page canvas without a card — it is designed to sit on a white surface.
+- ❌ With raw colours/sizes — every value comes from tokens.
+
+## Variants
+
+Leading `icon`, trailing `value` / `badge` / `trailing` / chevron, `divider`, `destructive`.
+
+<Controls />
+
+## States
+
+Default · pressed (subtle `background.secondary` highlight) · destructive (red). Non-interactive when
+no `onPress` is given (renders a plain row, no button role).
+
+## Accessibility
+
+Interactive rows are `button`s labelled by the row label; a `badge` count is folded into the
+accessible name ("Notifications, 3").
+
+## Responsive behavior
+
+Full width; the label flexes and trailing content stays right-aligned. Minimum height `size.48`.
+
+## Platform notes
+
+Pure RN primitives — identical on web (react-native-web) and native.
+
+## Tokens used
+
+`background.secondary` · `border.default` · `borderWidth.hairline` · `icon.secondary` · `icon.error` ·
+`text.primary` · `text.error` · `text.onError` · `background.errorSolid` · `space.md` · `space.sm` ·
+`size.48` · `size.20` · `size.4` · `radius.pill` · `iconSize.md` · `iconSize.sm` ·
+`typography.labelBase` · `typography.bodyXSmall` · `typography.labelXXSmall`.

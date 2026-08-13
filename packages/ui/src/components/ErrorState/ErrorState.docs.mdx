@@ -1,0 +1,48 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as ErrorStateStories from './ErrorState.stories';
+
+<Meta of={ErrorStateStories} />
+
+# ErrorState
+
+## Purpose
+
+A centred **failed-load** state — an icon over a title + hint with a **Retry** action. It's the "error" of
+the data-state trio: **loading** (`Skeleton`) → **empty** (`EmptyState`) → **error** (`ErrorState`). Use it
+when a fetch fails, not when a list is legitimately empty.
+
+## Usage
+
+- Drop it where the content would go when a request fails; pass `onRetry` to re-run the request.
+- Override `icon` / `title` / `description` for the context ("Couldn’t load your bookings").
+- It only centres its own content — **the consumer owns vertical placement** (`style={{ paddingTop }}` to push
+  it below a header), same as `EmptyState`.
+
+<Canvas of={ErrorStateStories.Variants} />
+
+## Do not use
+
+- ❌ For an empty (but successful) list — that's `EmptyState`. This reads as *broken*, not *nothing yet*.
+- ❌ For a transient action failure ("Couldn’t apply code") — that's an error `Toast`.
+- ❌ As a blocking modal — it's an inline region; for a destructive confirm use a dialog.
+
+## Variants
+
+`icon` · `title` · `description` · `onRetry` (+ `retryLabel`). Omit `onRetry` for a message-only state.
+
+### Retry emphasis
+
+`retryVariant` defaults to **`outline`** — a recovery action in a calm state shouldn't shout. Reserve filled
+**`primary`** for high-intent conversion CTAs (Book / Checkout / Apply). The DS **`secondary` is a gold fill**
+(a loud accent, not a "soft" option) — don't use it to calm an action down. See the **Emphasis** story (AGENTS #33).
+
+<Canvas of={ErrorStateStories.Emphasis} />
+
+## Accessibility
+
+The icon is decorative; the meaning is the copy. `Retry` is a labelled `Button`. (Built on `EmptyState`.)
+
+## Tokens used
+
+Inherits `EmptyState` (`text.tertiary`, `space.lg/sm/md`, `iconSize.xl`, `Button`), with the icon in
+`icon.secondary` (a touch more present than EmptyState's `icon.disabled`, so it reads as an error).

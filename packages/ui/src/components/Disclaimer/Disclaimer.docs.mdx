@@ -1,0 +1,37 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as DisclaimerStories from './Disclaimer.stories';
+
+<Meta of={DisclaimerStories} />
+
+# Disclaimer
+
+## Purpose
+
+A low-emphasis, **neutral** inline callout — a leading icon, small text, and an optional trailing link. For
+reference / reassurance copy: free cancellation, terms, VAT/fees notes.
+
+## Usage
+
+- Put the message in `children`; set `icon` (default `shield-check`) and an optional `action` link.
+- It's deliberately **grey** (`background.tertiary`) — neutral, not a coloured alert.
+
+<Canvas of={DisclaimerStories.WithLink} />
+
+## Do not use
+
+- ❌ For a coloured, attention-drawing notice (success/warning/error) — that's `InfoCard`.
+- ❌ For transient feedback after an action — that's `Toast`.
+
+## Variants
+
+`icon` (any Lucide name) · optional `action` link. Text wraps freely.
+
+## Accessibility
+
+The icon is decorative; the link is a labelled button. Keep the copy itself meaningful (don't rely on the
+icon).
+
+## Tokens used
+
+`background.tertiary` · `radius.default` · `space.md` / `space.sm` · `icon.secondary` · `text.primary` ·
+`text.link` (link).

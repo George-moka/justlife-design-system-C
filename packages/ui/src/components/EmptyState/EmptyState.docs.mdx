@@ -1,0 +1,41 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as EmptyStateStories from './EmptyState.stories';
+
+<Meta of={EmptyStateStories} />
+
+# EmptyState
+
+## Purpose
+
+A centred, **low-emphasis** placeholder for a list or screen with nothing in it yet — a muted icon over a
+ghost title + hint, with an optional primary action. Quiet by design (tertiary text, a disabled-tone icon)
+so it reads as "nothing here," not an error.
+
+## Usage
+
+- Set `icon` (any Lucide name), a `title`, and an optional `description`.
+- Add an `action` (`{ label, onPress, icon? }`) when there's an obvious next step ("Browse services").
+- The component only centres its own content — **the consumer owns vertical placement**. Push it below a
+  header with `style={{ paddingTop }}`.
+
+<Canvas of={EmptyStateStories.WithAction} />
+
+## Do not use
+
+- ❌ For an error or failed-load state (use a tone'd `InfoCard` / retry affordance) — this is for *empty*, not *broken*.
+- ❌ For transient feedback after an action — that's `Toast`.
+
+## Variants
+
+`icon` · `title` · optional `description` · optional `action` button. See **Variants** for empty bookings,
+favorites, and wallet examples.
+
+## Accessibility
+
+The icon is decorative; the meaning lives in the `title`/`description` copy. The `action` renders a labelled
+`Button`.
+
+## Tokens used
+
+`icon.disabled` · `text.tertiary` (title + description) · `space.lg` (inset) · `space.sm` / `space.md`
+(spacing) · `iconSize.xl`. Action uses `Button` (`variant="primary"`, `size="xs"` — the app's prevailing size).

@@ -1,0 +1,31 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as DirhamStories from './Dirham.stories';
+
+<Meta of={DirhamStories} />
+
+# Dirham
+
+## Purpose
+
+`Dirham` renders the **official UAE dirham currency symbol** as *text*, never an image — so it sizes,
+colours, aligns and wraps exactly like the amount it accompanies. It draws the string `AED` in the
+single-glyph symbol font (`assets/fonts/aed-Regular.otf`): the font maps `A`/`E` to zero-width glyphs and
+`D` to the symbol, so the letters collapse into the glyph — and if the font isn't loaded, the reader still
+sees a legible "AED".
+
+## Usage
+
+- Pair it with the amount's own `variant` and `color` so symbol and digits read as one unit.
+- Screen readers announce "AED" (override with `accessibilityLabel` if a sentence needs it).
+- Register the font once per platform under the exact family `aed`: Storybook loads it via
+  `@font-face` in `preview-head.html`; the Expo app via `useFonts({ aed: require(…aed-Regular.otf) })`.
+
+<Canvas of={DirhamStories.WithAmounts} />
+
+## Do not use
+
+- ❌ As an image/SVG of the symbol — it would fall out of the type system (scaling, colour, baseline).
+- ❌ With a bold weight — the symbol is a fixed single-weight design; the component pins weight to normal.
+- ❌ For other currencies — this is the AED symbol only.
+
+<Controls of={DirhamStories.Playground} />

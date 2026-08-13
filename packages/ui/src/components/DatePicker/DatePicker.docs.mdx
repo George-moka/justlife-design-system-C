@@ -1,0 +1,37 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as DatePickerStories from './DatePicker.stories';
+
+<Meta of={DatePickerStories} />
+
+# DatePicker
+
+## Purpose
+
+A horizontal **strip of day chips** (weekday label over the date number) for picking a single service date —
+the booking funnel’s Date & Time step.
+
+## Usage
+
+- Pass `days` (`{ day, date }[]`), the selected `value`, and `onChange`.
+- Composes `Selectable`, so chips match every other choice control; it scrolls horizontally and owns its
+  side inset.
+
+<Canvas of={DatePickerStories.Default} />
+
+## Do not use
+
+- ❌ For days-of-week in a recurring plan — that's `WeekdayPicker` (multi-select).
+- ❌ For times — that's `TimeSlotPicker`.
+- ❌ As a full month-grid calendar (not yet built).
+
+## Variants / States
+
+Per-chip: default · selected (brand fill) · `disabled`. Single-select across the strip.
+
+## Accessibility
+
+Each chip is a labelled `Selectable` button (`"<weekday> <date>"`); the strip scrolls horizontally.
+
+## Tokens used
+
+`size.56` (chip width) · `size.8` (gap) · `size.2` · `space.sm` / `space.md` · plus `Selectable`’s tokens.
