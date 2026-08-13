@@ -1,0 +1,29 @@
+{
+  "name": "@justlife/tokens",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Justlife Design System design tokens (DTCG source -> CSS + TS + JS).",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./css": "./dist/css/tokens.css",
+    "./tokens.css": "./dist/css/tokens.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "node build.mjs && tsc -p tsconfig.build.json",
+    "import": "node import.mjs",
+    "clean": "rm -rf dist generated"
+  },
+  "devDependencies": {
+    "style-dictionary": "^4.3.0",
+    "typescript": "^5.7.2"
+  }
+}

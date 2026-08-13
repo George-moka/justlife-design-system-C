@@ -1,0 +1,560 @@
+{
+  "color": {
+    "yellow": {
+      "50": {
+        "$type": "color",
+        "$value": "#FFFCF2",
+        "$description": "Lightest yellow — subtle tints and hover backgrounds."
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#FFF8D6"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#FFEEA0"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#FFDD7F"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#FFD44F"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#FFCC27"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#E6B400"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#B86819",
+        "$description": "Dark amber (#b86819). Part of yellow scale. Same hex as orange/600 — intentional: amber sits at intersection of yellow and orange families."
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#7A4A00"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#524008"
+      }
+    },
+    "teal": {
+      "50": {
+        "$type": "color",
+        "$value": "#E8FBFE"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#CCF4FB"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#99E6F5"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#61CFE6"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#26B4CF"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#0096B3"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#007A94"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#0F6277"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#135163"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#134453"
+      }
+    },
+    "green": {
+      "50": {
+        "$type": "color",
+        "$value": "#F4FFE0"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#E4FFB8"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#CBFF5E"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#BBFF33"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#AAED1D",
+        "$description": "Lime green (#aaed1d). Success/availability accent."
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#8BC34A"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#6B9E00"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#496B00"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#2E4400"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#1A2B00"
+      }
+    },
+    "base": {
+      "white": {
+        "$type": "color",
+        "$value": "#FFFFFF",
+        "$description": "Pure white (#ffffff). Use for backgrounds, card surfaces."
+      },
+      "black": {
+        "$type": "color",
+        "$value": "#1A1A1A",
+        "$description": "Pure brand black (#1a1a1a). Intentionally same value as neutral/900. Use color/base/black for absolute black references, neutral/900 for dark text/bg scale steps."
+      }
+    },
+    "red": {
+      "50": {
+        "$type": "color",
+        "$value": "#FFF6F6"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#FFE0E0"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#FFBABA"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#FF9A9A"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#FF7272",
+        "$description": "Coral red (#ff7272). Error and ranking accent."
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#EF4444"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#D42222"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#B91C1C"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#991B1B"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#7F1D1D"
+      }
+    },
+    "decorative": {
+      "map-bg": {
+        "$type": "color",
+        "$value": "#D4DCCA"
+      },
+      "map-accent": {
+        "$type": "color",
+        "$value": "#BFCCE0"
+      },
+      "dialog-bg": {
+        "$type": "color",
+        "$value": "#F5F5F0"
+      },
+      "promo-green": {
+        "$type": "color",
+        "$value": "#EDFFC6",
+        "$description": "Light green — lab tests, health promos. #edffc6"
+      },
+      "promo-blue": {
+        "$type": "color",
+        "$value": "#D7FBFF",
+        "$description": "Light blue — flu vaccine, health promos. #d7fbff"
+      },
+      "promo-pink": {
+        "$type": "color",
+        "$value": "#FFDCDC",
+        "$description": "Light pink — beauty, seasonal promos. #ffdcdc"
+      },
+      "promo-cream": {
+        "$type": "color",
+        "$value": "#FFFDF3",
+        "$description": "Light cream — handyman, service promos. #fffdf3"
+      },
+      "promo-teal": {
+        "$type": "color",
+        "$value": "#F4FEFF",
+        "$description": "Very light teal — service tile card backgrounds. #f4feff"
+      },
+      "promo-dark-teal": {
+        "$type": "color",
+        "$value": "{color.teal.900}",
+        "$description": "Dark teal #134453. Health/wellness promo card text."
+      },
+      "campaign-pink": {
+        "$type": "color",
+        "$value": "#E84FCF",
+        "$description": "Campaign pink #e84fcf. Beauty and seasonal campaigns."
+      },
+      "flag-green": {
+        "$type": "color",
+        "$value": "#6DA544",
+        "$description": "UAE flag green #6da544."
+      },
+      "flag-white": {
+        "$type": "color",
+        "$value": "#F0F0F0",
+        "$description": "UAE flag white #f0f0f0."
+      },
+      "flag-red": {
+        "$type": "color",
+        "$value": "#A2001D",
+        "$description": "UAE flag red #a2001d."
+      }
+    },
+    "orange": {
+      "50": {
+        "$type": "color",
+        "$value": "#FFF8EE"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#FEECD3"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#FDD5A0"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#FCBB6A"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#FAA040"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#F87B19",
+        "$description": "Brand orange (#f87b19). Promo accent."
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#B86819",
+        "$description": "Dark orange (#b86819). Part of orange scale. Same hex as yellow/700 — intentional: this shade is shared between families."
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#8A4A0C"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#5C3008"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#2E1804"
+      }
+    },
+    "neutral": {
+      "50": {
+        "$type": "color",
+        "$value": "#FAFAFA",
+        "$description": "Near-white neutral (#fafafa). Subtle backgrounds."
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#FBFAF7"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#F5F5F5"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#DDDDDD"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#AAAAAA"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#7E8080",
+        "$description": "Mid grey (#7e8080). Secondary text and icons."
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#666666"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#4D4D4D"
+      },
+      "750": {
+        "$type": "color",
+        "$value": "#3A3A3A",
+        "$description": "Neutral gray #3a3a3a. Between neutral/700 (#4d4d4d) and neutral/800 (#232424)."
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#232424"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#1A1A1A",
+        "$description": "Darkest neutral in the scale (#1a1a1a). Same value as color/base/black. Use in neutral ramp contexts (text, bg scales)."
+      }
+    },
+    "blue": {
+      "50": {
+        "$type": "color",
+        "$value": "#E6F9FF",
+        "$description": "Lightest brand blue — subtle tints."
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#B3EEFF"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#66DCFF"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#33D1FF"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#0ACBFF"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#00C3FF",
+        "$description": "Brand blue (#00c3ff). Primary brand color."
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#00A8DC"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#008AB5"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#006B8A"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#134453"
+      }
+    },
+    "purple": {
+      "50": {
+        "$type": "color",
+        "$value": "#F5EDFA"
+      },
+      "100": {
+        "$type": "color",
+        "$value": "#E8D6F2"
+      },
+      "200": {
+        "$type": "color",
+        "$value": "#D1ADE0"
+      },
+      "300": {
+        "$type": "color",
+        "$value": "#BA87CF"
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#AD6BB5"
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#94529C"
+      },
+      "600": {
+        "$type": "color",
+        "$value": "#7D3D85"
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#612B69"
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#471F4D"
+      },
+      "900": {
+        "$type": "color",
+        "$value": "#2E1233"
+      }
+    },
+    "ring": {
+      "focus-primary": {
+        "$type": "color",
+        "$value": "rgba(0, 195, 255, 0.4)",
+        "$description": "Focus halo for Primary buttons. Preserves current hardcoded value."
+      },
+      "focus-secondary": {
+        "$type": "color",
+        "$value": "rgba(255, 204, 38, 0.4)",
+        "$description": "Focus halo for Secondary buttons."
+      },
+      "focus-tertiary": {
+        "$type": "color",
+        "$value": "rgba(26, 26, 26, 0.3)",
+        "$description": "Focus halo for Tertiary buttons."
+      },
+      "focus-danger": {
+        "$type": "color",
+        "$value": "rgba(240, 69, 69, 0.4)",
+        "$description": "Focus halo for Danger/Destructive buttons."
+      },
+      "focus-pill": {
+        "$type": "color",
+        "$value": "rgba(73, 107, 0, 0.3)",
+        "$description": "Focus halo for Pill buttons."
+      }
+    },
+    "overlay": {
+      "avatar-disabled": {
+        "$type": "color",
+        "$value": "rgba(255, 255, 255, 0.6)",
+        "$description": "White 60% overlay (#FFFFFF99) — equals opacity/60. Alpha cannot reference opacity tokens in Figma; keep in sync manually."
+      }
+    },
+    "incentives": {
+      "tier-diamond": {
+        "$type": "color",
+        "$value": "#EDFAFE"
+      },
+      "tier-gold": {
+        "$type": "color",
+        "$value": "#FFFBE4"
+      },
+      "tier-silver": {
+        "$type": "color",
+        "$value": "#F9FAFB"
+      },
+      "tier-bronze": {
+        "$type": "color",
+        "$value": "#FFF4E9"
+      },
+      "tier-basic": {
+        "$type": "color",
+        "$value": "#FFDCDC"
+      },
+      "tier-new": {
+        "$type": "color",
+        "$value": "#EAFAFF"
+      },
+      "zone-green": {
+        "$type": "color",
+        "$value": "#AAED1D"
+      },
+      "zone-yellow": {
+        "$type": "color",
+        "$value": "#FFD200"
+      },
+      "zone-orange": {
+        "$type": "color",
+        "$value": "#FFB443"
+      },
+      "zone-pink": {
+        "$type": "color",
+        "$value": "#FFAFBB"
+      },
+      "zone-red": {
+        "$type": "color",
+        "$value": "#FF7272"
+      },
+      "text-dark": {
+        "$type": "color",
+        "$value": "#212121",
+        "$description": "Professional Incentives — dark label text (#212121)"
+      },
+      "star": {
+        "$type": "color",
+        "$value": "#FFC107",
+        "$description": "Professional Incentives — star rating amber (#FFC107)"
+      },
+      "tier-green": {
+        "$type": "color",
+        "$value": "{color.green.50}",
+        "$description": "Professional Incentives — green tier background (aliases color/green/50)"
+      }
+    },
+    "wallet": {
+      "surface": {
+        "$type": "color",
+        "$value": "#125479",
+        "$description": "Wallet card navy surface (#125479)"
+      }
+    },
+    "credit-package": {
+      "basic-bg": {
+        "$type": "color",
+        "$value": "#D7FBFF"
+      },
+      "basic-accent": {
+        "$type": "color",
+        "$value": "#58E8FF"
+      },
+      "smart-bg": {
+        "$type": "color",
+        "$value": "#FFF8D3"
+      },
+      "smart-accent": {
+        "$type": "color",
+        "$value": "#F6C644"
+      },
+      "super-bg": {
+        "$type": "color",
+        "$value": "#EDFFC6"
+      },
+      "super-accent": {
+        "$type": "color",
+        "$value": "#AAED1D"
+      }
+    }
+  }
+}

@@ -1,0 +1,1350 @@
+{
+  "background": {
+    "primary": {
+      "$type": "color",
+      "$value": "#1A1A1A",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "canvas": {
+      "$type": "color",
+      "$value": "#1A1A1A",
+      "$description": "Page / screen base (the lowest, darkest level). Raised cards sit on it as `surface` (#232424, lighter)."
+    },
+    "secondary": {
+      "$type": "color",
+      "$value": "#232424",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "tertiary": {
+      "$type": "color",
+      "$value": "#4D4D4D",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "paper": {
+      "$type": "color",
+      "$value": "#232424",
+      "$description": "Warm paper base for the funnel header gradient band (behind the content card). Use as the RadialGlow base."
+    },
+    "inverse": {
+      "$type": "color",
+      "$value": "#FFFFFF",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "inverse-hover": {
+      "$type": "color",
+      "$value": "#FBFAF7",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "brand-default": {
+      "$type": "color",
+      "$value": "#0ACBFF",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "brand-hover": {
+      "$type": "color",
+      "$value": "#33D1FF",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "brand-subtle": {
+      "$type": "color",
+      "$value": "#134453",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "brand-on-solid": {
+      "$type": "color",
+      "$value": "#1A1A1A",
+      "$description": "Intentionally non-adaptive. Background on brand-solid always dark regardless of theme."
+    },
+    "warning-default": {
+      "$type": "color",
+      "$value": "#2E1804",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "warning-hover": {
+      "$type": "color",
+      "$value": "#5C3008",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "warning-solid": {
+      "$type": "color",
+      "$value": "#B86819",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "warning-solid-hover": {
+      "$type": "color",
+      "$value": "#F87B19",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "error-default": {
+      "$type": "color",
+      "$value": "#7F1D1D",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "error-hover": {
+      "$type": "color",
+      "$value": "#991B1B",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "error-solid": {
+      "$type": "color",
+      "$value": "#D42222",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "error-solid-hover": {
+      "$type": "color",
+      "$value": "#EF4444",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "info-default": {
+      "$type": "color",
+      "$value": "#524008",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "info-hover": {
+      "$type": "color",
+      "$value": "#7A4A00",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "info-solid": {
+      "$type": "color",
+      "$value": "#FFD44F",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "info-solid-hover": {
+      "$type": "color",
+      "$value": "#FFDD7F",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "info-on-solid": {
+      "$type": "color",
+      "$value": "#FFF8D6",
+      "$description": "Text/icon on info solid background (yellow). White in light mode."
+    },
+    "success-default": {
+      "$type": "color",
+      "$value": "#1A2B00",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "success-hover": {
+      "$type": "color",
+      "$value": "#2E4400",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "success-solid": {
+      "$type": "color",
+      "$value": "#AAED1D",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "disabled": {
+      "$type": "color",
+      "$value": "#3A3A3A",
+      "$description": "Disabled element background. Intentionally same as secondary to look muted."
+    },
+    "surface": {
+      "$type": "color",
+      "$value": "#232424",
+      "$description": "Elevated surface (cards, panels). Same as primary in light. Distinct in dark."
+    },
+    "surface-raised": {
+      "$type": "color",
+      "$value": "#4D4D4D",
+      "$description": "Higher elevation (modals, dropdowns). Distinct from surface in dark mode."
+    },
+    "overlay-light": {
+      "$type": "color",
+      "$value": "#1A1A1A",
+      "$description": "Subtle scrim overlay (#fafafa light). Use for gentle focus traps."
+    },
+    "overlay-default": {
+      "$type": "color",
+      "$value": "#4D4D4D",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "overlay-heavy": {
+      "$type": "color",
+      "$value": "#666666",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "options": {
+      "$type": "color",
+      "$value": "#BA87CF",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "options-hover": {
+      "$type": "color",
+      "$value": "#BA87CF",
+      "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+    },
+    "rating": {
+      "$type": "color",
+      "$value": "#E6B400",
+      "$description": "Rating tag / badge background. Yellow accent. Light: yellow/500, Dark: yellow/600."
+    },
+    "error": {
+      "$type": "color",
+      "$value": "#FF7272",
+      "$description": "Error state background. Light: very light red (50), Dark: vivid red (400)."
+    },
+    "success": {
+      "$type": "color",
+      "$value": "#2E4400",
+      "$description": "Success state background. Light: very light green (50), Dark: vivid green (300)."
+    },
+    "info-solid-active": {
+      "$type": "color",
+      "$value": "#FFEEA0",
+      "$description": "Info solid background — active/pressed state."
+    },
+    "secondary-action": {
+      "$type": "color",
+      "$value": "#FFD44F",
+      "$description": "Secondary action (e.g. Secondary button) solid background — default state. Distinct from info-solid to avoid semantic coupling."
+    },
+    "secondary-action-hover": {
+      "$type": "color",
+      "$value": "#FFDD7F",
+      "$description": "Secondary action solid background — hover state."
+    },
+    "secondary-action-active": {
+      "$type": "color",
+      "$value": "#FFEEA0",
+      "$description": "Secondary action solid background — active/pressed state."
+    },
+    "destructive": {
+      "$type": "color",
+      "$value": "#D42222"
+    },
+    "destructive-hover": {
+      "$type": "color",
+      "$value": "#EF4444"
+    },
+    "destructive-active": {
+      "$type": "color",
+      "$value": "#FF7272"
+    },
+    "tertiary-action-hover": {
+      "$type": "color",
+      "$value": "#0F6277"
+    },
+    "tertiary-action-active": {
+      "$type": "color",
+      "$value": "#134453"
+    },
+    "outline-active": {
+      "$type": "color",
+      "$value": "#3A3A3A"
+    },
+    "pill": {
+      "$type": "color",
+      "$value": "#232424"
+    },
+    "pill-hover": {
+      "$type": "color",
+      "$value": "#3A3A3A"
+    },
+    "pill-active": {
+      "$type": "color",
+      "$value": "#3A3A3A"
+    },
+    "avatar-disabled-overlay": {
+      "$type": "color",
+      "$value": "rgba(255, 255, 255, 0.6)"
+    },
+    "tertiary-action": {
+      "$type": "color",
+      "$value": "#135163"
+    },
+    "selected": {
+      "$type": "color",
+      "$value": "#134453",
+      "$description": "Selected-state background tint (e.g. selected cards / list rows)."
+    },
+    "promo": {
+      "subtle": {
+        "$type": "color",
+        "$value": "#134453",
+        "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+      },
+      "subtle-hover": {
+        "$type": "color",
+        "$value": "#135163",
+        "$description": "Surface and container backgrounds. Use semantic tokens, not primitives directly."
+      },
+      "health": {
+        "$type": "color",
+        "$value": "#EDFFC6",
+        "$description": "Health promo card background (light green). Aliases → decorative/promo-green."
+      },
+      "vaccine": {
+        "$type": "color",
+        "$value": "#D7FBFF",
+        "$description": "Vaccine/wellness promo card background (light blue). Aliases → decorative/promo-blue."
+      },
+      "beauty": {
+        "$type": "color",
+        "$value": "#FFDCDC",
+        "$description": "Beauty promo card background (light pink). Aliases → decorative/promo-pink."
+      },
+      "service": {
+        "$type": "color",
+        "$value": "#FFFDF3",
+        "$description": "Service promo card background (light cream). Aliases → decorative/promo-cream."
+      },
+      "tile": {
+        "$type": "color",
+        "$value": "#F4FEFF",
+        "$description": "Service tile card background (very light teal). Aliases → decorative/promo-teal."
+      },
+      "campaign-accent": {
+        "$type": "color",
+        "$value": "#E84FCF",
+        "$description": "Campaign accent pink. Aliases → decorative/campaign-pink."
+      }
+    }
+  },
+  "text": {
+    "primary": {
+      "$type": "color",
+      "$value": "#FFFFFF",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "primary-hover": {
+      "$type": "color",
+      "$value": "#F5F5F5",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "inverse": {
+      "$type": "color",
+      "$value": "#1A1A1A",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "secondary": {
+      "$type": "color",
+      "$value": "#AAAAAA",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "secondary-hover": {
+      "$type": "color",
+      "$value": "#DDDDDD",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "tertiary": {
+      "$type": "color",
+      "$value": "#666666",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "disabled": {
+      "$type": "color",
+      "$value": "#4D4D4D",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "placeholder": {
+      "$type": "color",
+      "$value": "#666666",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "brand": {
+      "$type": "color",
+      "$value": "#0ACBFF",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "brand-hover": {
+      "$type": "color",
+      "$value": "#33D1FF",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "on-brand": {
+      "$type": "color",
+      "$value": "#FFFFFF",
+      "$description": "Text/icon on brand-blue surfaces. White in both modes — product ruling 2026-06: blue CTAs always use white text. (Previously dark — see DS changelog.)"
+    },
+    "warning": {
+      "$type": "color",
+      "$value": "#FCBB6A",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "warning-inverse": {
+      "$type": "color",
+      "$value": "#FFFFFF",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "on-warning": {
+      "$type": "color",
+      "$value": "#1A1A1A",
+      "$description": "Intentionally non-adaptive. Text on warning always dark for contrast."
+    },
+    "error-hover": {
+      "$type": "color",
+      "$value": "#EF4444",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "error-inverse": {
+      "$type": "color",
+      "$value": "#FFFFFF",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "info-hover": {
+      "$type": "color",
+      "$value": "#FFEEA0",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "info-on-solid": {
+      "$type": "color",
+      "$value": "#FFF8D6",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "info-inverse": {
+      "$type": "color",
+      "$value": "#1A1A1A",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "success": {
+      "$type": "color",
+      "$value": "#BBFF33",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "success-inverse": {
+      "$type": "color",
+      "$value": "#1A1A1A",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "on-success": {
+      "$type": "color",
+      "$value": "#1A1A1A",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "promo": {
+      "$type": "color",
+      "$value": "#61CFE6",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "on-promo": {
+      "$type": "color",
+      "$value": "#FFFFFF",
+      "$description": "Intentionally non-adaptive. Text on promo always white for contrast."
+    },
+    "link": {
+      "$type": "color",
+      "$value": "#0ACBFF",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "link-hover": {
+      "$type": "color",
+      "$value": "#33D1FF",
+      "$description": "Text and label colors. Always prefer text/* over hardcoded values."
+    },
+    "link-brand": {
+      "$type": "color",
+      "$value": "#0ACBFF",
+      "$description": "Brand blue link text — full brand blue (blue/500 light, blue/400 dark)"
+    },
+    "error": {
+      "$type": "color",
+      "$value": "#FF7272",
+      "$description": "Base error text color. Replaces text/notification-danger."
+    },
+    "info": {
+      "$type": "color",
+      "$value": "#FFEEA0",
+      "$description": "Base informational text color — helper text, captions, status messages."
+    },
+    "success-hover": {
+      "$type": "color",
+      "$value": "#CBFF5E",
+      "$description": "Hover state for success text"
+    },
+    "on-options": {
+      "$type": "color",
+      "$value": "#FFFFFF",
+      "$description": "Intentionally non-adaptive. Text on purple options bg always white."
+    },
+    "promo-dark": {
+      "$type": "color",
+      "$value": "#134453",
+      "$description": "Dark teal text for promo cards. Aliases → decorative/promo-dark-teal."
+    },
+    "promo-accent": {
+      "$type": "color",
+      "$value": "#E84FCF",
+      "$description": "Campaign accent pink text. Aliases → decorative/campaign-pink."
+    },
+    "on-error": {
+      "$type": "color",
+      "$value": "#FFFFFF",
+      "$description": "Text color on error-solid backgrounds (destructive buttons, error banners)."
+    },
+    "on-secondary-action": {
+      "$type": "color",
+      "$value": "#FFFFFF",
+      "$description": "Text on secondary-action (yellow) solid backgrounds — WHITE in both modes per product ruling 2026-06 (matches brand CTA treatment). Note: contrast on yellow/500 is below AA; ruling accepted by design."
+    },
+    "on-pill": {
+      "$type": "color",
+      "$value": "#6B9E00"
+    },
+    "on-primary": {
+      "$type": "color",
+      "$value": "{text.on-brand}"
+    },
+    "on-tertiary": {
+      "$type": "color",
+      "$value": "#FFFFFF",
+      "$description": "Text on tertiary-action (solid teal) backgrounds — WHITE in both modes per product ruling 2026-06 (all colored CTAs use white text)."
+    }
+  },
+  "icon": {
+    "primary": {
+      "$type": "color",
+      "$value": "#FFFFFF",
+      "$description": "Icon fill and stroke colors. Use icon/* tokens for all iconography."
+    },
+    "primary-hover": {
+      "$type": "color",
+      "$value": "#DDDDDD",
+      "$description": "Icon fill and stroke colors. Use icon/* tokens for all iconography."
+    },
+    "secondary": {
+      "$type": "color",
+      "$value": "#AAAAAA",
+      "$description": "Icon fill and stroke colors. Use icon/* tokens for all iconography."
+    },
+    "secondary-hover": {
+      "$type": "color",
+      "$value": "#DDDDDD",
+      "$description": "Icon fill and stroke colors. Use icon/* tokens for all iconography."
+    },
+    "muted": {
+      "$type": "color",
+      "$value": "#666666",
+      "$description": "Icon fill and stroke colors. Use icon/* tokens for all iconography."
+    },
+    "disabled": {
+      "$type": "color",
+      "$value": "#7E8080",
+      "$description": "Icon fill and stroke colors. Use icon/* tokens for all iconography."
+    },
+    "inverse": {
+      "$type": "color",
+      "$value": "#1A1A1A",
+      "$description": "Icon fill and stroke colors. Use icon/* tokens for all iconography."
+    },
+    "brand": {
+      "$type": "color",
+      "$value": "#0ACBFF",
+      "$description": "Icon fill and stroke colors. Use icon/* tokens for all iconography."
+    },
+    "warning": {
+      "$type": "color",
+      "$value": "#FAA040",
+      "$description": "Icon fill and stroke colors. Use icon/* tokens for all iconography."
+    },
+    "warning-inverse": {
+      "$type": "color",
+      "$value": "#1A1A1A",
+      "$description": "Intentionally non-adaptive. Icon on warning-inverse always dark."
+    },
+    "error": {
+      "$type": "color",
+      "$value": "#FF7272",
+      "$description": "Icon fill and stroke colors. Use icon/* tokens for all iconography."
+    },
+    "success": {
+      "$type": "color",
+      "$value": "#AAED1D",
+      "$description": "Icon fill and stroke colors. Use icon/* tokens for all iconography."
+    },
+    "success-inverse": {
+      "$type": "color",
+      "$value": "#1A1A1A",
+      "$description": "Icon fill and stroke colors. Use icon/* tokens for all iconography."
+    },
+    "info": {
+      "$type": "color",
+      "$value": "#FFD44F",
+      "$description": "Icon fill and stroke colors. Use icon/* tokens for all iconography."
+    },
+    "promo": {
+      "$type": "color",
+      "$value": "#26B4CF",
+      "$description": "Icon fill and stroke colors. Use icon/* tokens for all iconography."
+    },
+    "on-solid": {
+      "$type": "color",
+      "$value": "#FFFFFF",
+      "$description": "Intentionally non-adaptive. Icon on solid brand bg always white."
+    },
+    "on-solid-warning": {
+      "$type": "color",
+      "$value": "#1A1A1A",
+      "$description": "Intentionally non-adaptive. Icon on solid warning always dark."
+    },
+    "link": {
+      "$type": "color",
+      "$value": "#0ACBFF",
+      "$description": "Icon fill and stroke colors. Use icon/* tokens for all iconography."
+    },
+    "flag-green": {
+      "$type": "color",
+      "$value": "#6DA544",
+      "$description": "Flag green for country indicators."
+    },
+    "flag-white": {
+      "$type": "color",
+      "$value": "#F0F0F0",
+      "$description": "Flag white for country indicators."
+    },
+    "flag-red": {
+      "$type": "color",
+      "$value": "#A2001D",
+      "$description": "Flag red for country indicators."
+    }
+  },
+  "border": {
+    "default": {
+      "$type": "color",
+      "$value": "#4D4D4D",
+      "$description": "Stroke and divider colors. Use border/* tokens for all borders and separators."
+    },
+    "strong": {
+      "$type": "color",
+      "$value": "#AAAAAA",
+      "$description": "Stroke and divider colors. Use border/* tokens for all borders and separators."
+    },
+    "inverse": {
+      "$type": "color",
+      "$value": "#1A1A1A",
+      "$description": "Stroke and divider colors. Use border/* tokens for all borders and separators."
+    },
+    "brand-default": {
+      "$type": "color",
+      "$value": "#0ACBFF",
+      "$description": "Stroke and divider colors. Use border/* tokens for all borders and separators."
+    },
+    "brand-inverse": {
+      "$type": "color",
+      "$value": "#1A1A1A",
+      "$description": "Intentionally non-adaptive. Brand inverse border always dark."
+    },
+    "error-default": {
+      "$type": "color",
+      "$value": "#B91C1C",
+      "$description": "Stroke and divider colors. Use border/* tokens for all borders and separators."
+    },
+    "error-solid": {
+      "$type": "color",
+      "$value": "#B91C1C",
+      "$description": "Stroke and divider colors. Use border/* tokens for all borders and separators."
+    },
+    "focus": {
+      "$type": "color",
+      "$value": "#66DCFF",
+      "$description": "Stroke and divider colors. Use border/* tokens for all borders and separators."
+    },
+    "disabled": {
+      "$type": "color",
+      "$value": "#232424",
+      "$description": "Stroke and divider colors. Use border/* tokens for all borders and separators."
+    },
+    "info-default": {
+      "$type": "color",
+      "$value": "#B86819",
+      "$description": "Stroke and divider colors. Use border/* tokens for all borders and separators."
+    },
+    "success-default": {
+      "$type": "color",
+      "$value": "#496B00",
+      "$description": "Stroke and divider colors. Use border/* tokens for all borders and separators."
+    },
+    "warning-default": {
+      "$type": "color",
+      "$value": "#8A4A0C",
+      "$description": "Stroke and divider colors. Use border/* tokens for all borders and separators."
+    },
+    "subtle": {
+      "$type": "color",
+      "$value": "#232424",
+      "$description": "Stroke and divider colors. Use border/* tokens for all borders and separators."
+    },
+    "ring-primary": {
+      "$type": "color",
+      "$value": "rgba(0, 195, 255, 0.4)",
+      "$description": "Focus ring (semantic layer). Aliases primitive color/ring/focus-primary. Dark currently mirrors Light — pending design decision."
+    },
+    "ring-secondary": {
+      "$type": "color",
+      "$value": "rgba(255, 204, 38, 0.4)",
+      "$description": "Focus ring (semantic layer). Aliases primitive color/ring/focus-secondary. Dark currently mirrors Light — pending design decision."
+    },
+    "ring-tertiary": {
+      "$type": "color",
+      "$value": "rgba(26, 26, 26, 0.3)",
+      "$description": "Focus ring (semantic layer). Aliases primitive color/ring/focus-tertiary. Dark currently mirrors Light — pending design decision."
+    },
+    "ring-danger": {
+      "$type": "color",
+      "$value": "rgba(240, 69, 69, 0.4)",
+      "$description": "Focus ring (semantic layer). Aliases primitive color/ring/focus-danger. Dark currently mirrors Light — pending design decision."
+    },
+    "ring-pill": {
+      "$type": "color",
+      "$value": "rgba(73, 107, 0, 0.3)",
+      "$description": "Focus ring (semantic layer). Aliases primitive color/ring/focus-pill. Dark currently mirrors Light — pending design decision."
+    },
+    "pill": {
+      "$type": "color",
+      "$value": "#4D4D4D"
+    },
+    "promo-inverse": {
+      "$type": "color",
+      "$value": "#99E6F5",
+      "$description": "Inverse border for promo (teal) surfaces. Light+Dark adaptive — light teal on dark for contrast."
+    }
+  },
+  "effects": {
+    "shadow-xs": {
+      "$type": "color",
+      "$value": "#1A1A1A",
+      "$description": "Shadows, overlays, and blur tokens. Light+Dark adaptive."
+    },
+    "shadow-sm": {
+      "$type": "color",
+      "$value": "#7E8080",
+      "$description": "Shadows, overlays, and blur tokens. Light+Dark adaptive."
+    },
+    "shadow-md": {
+      "$type": "color",
+      "$value": "#4D4D4D",
+      "$description": "Shadows, overlays, and blur tokens. Light+Dark adaptive."
+    },
+    "shadow-lg": {
+      "$type": "color",
+      "$value": "#4D4D4D",
+      "$description": "Shadows, overlays, and blur tokens. Light+Dark adaptive."
+    },
+    "shadow-xl": {
+      "$type": "color",
+      "$value": "#666666",
+      "$description": "Shadows, overlays, and blur tokens. Light+Dark adaptive."
+    },
+    "shadow-2xl": {
+      "$type": "color",
+      "$value": "#666666",
+      "$description": "Shadows, overlays, and blur tokens. Light+Dark adaptive."
+    },
+    "overlay-default": {
+      "$type": "color",
+      "$value": "#232424",
+      "$description": "Shadows, overlays, and blur tokens. Light+Dark adaptive."
+    },
+    "overlay-heavy": {
+      "$type": "color",
+      "$value": "#1A1A1A",
+      "$description": "Intentionally non-adaptive. Heavy overlay always dark neutral/900."
+    },
+    "overlay-light": {
+      "$type": "color",
+      "$value": "#4D4D4D",
+      "$description": "Shadows, overlays, and blur tokens. Light+Dark adaptive."
+    }
+  },
+  "glass": {
+    "tint": {
+      "$type": "color",
+      "$value": "rgba(28, 28, 30, 0.35)",
+      "$description": "Liquid-glass surface tint laid over the blurred backdrop (dark) — kept translucent so the blur reads through."
+    },
+    "tint-strong": {
+      "$type": "color",
+      "$value": "rgba(28, 28, 30, 0.4)",
+      "$description": "Denser glass tint for busy backdrops (dark). Kept moderate so the blur reads through."
+    },
+    "border": {
+      "$type": "color",
+      "$value": "rgba(255, 255, 255, 0.14)",
+      "$description": "Hairline edge highlight around a glass surface (dark)."
+    },
+    "highlight": {
+      "$type": "color",
+      "$value": "rgba(255, 255, 255, 0.2)",
+      "$description": "Top specular sheen line on a glass surface (dark)."
+    },
+    "blur": {
+      "$type": "dimension",
+      "$value": 24,
+      "$description": "Glass backdrop blur radius (web backdrop-filter, px)."
+    },
+    "intensity": {
+      "$type": "dimension",
+      "$value": 55,
+      "$description": "Glass blur intensity for the native expo-blur fallback (0-100). ~55 with a system-material tint reads as frost; 70+ washes out."
+    }
+  },
+  "badge": {
+    "bg": {
+      "primary": {
+        "$type": "color",
+        "$value": "#FFCC27",
+        "$description": "Rating badge background — yellow. Points to Primitive: color/yellow/500. Upgrade to Semantic in v0.4."
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "#00C3FF",
+        "$description": "Badge background — brand blue. → Semantic: background/brand-default."
+      },
+      "neutral": {
+        "$type": "color",
+        "$value": "#FBFAF7",
+        "$description": "Badge background — neutral. → Primitive: color/neutral/200."
+      },
+      "danger": {
+        "$type": "color",
+        "$value": "#EF4444",
+        "$description": "Danger badge background — red. Points to Primitive: color/red/400. Upgrade to Semantic in v0.4."
+      },
+      "success": {
+        "$type": "color",
+        "$value": "#BBFF33",
+        "$description": "Success badge background — green. Points to Primitive: color/green/300. Upgrade to Semantic in v0.4."
+      },
+      "info": {
+        "$type": "color",
+        "$value": "#FFCC27",
+        "$description": "Badge background — info. Upgrade to semantic in v0.4."
+      },
+      "warning": {
+        "$type": "color",
+        "$value": "#F87B19"
+      },
+      "instant": {
+        "$type": "color",
+        "$value": "#7A4A00",
+        "$description": "Instant / ETA tag background on dark — deep amber. Primitive: color/yellow/800."
+      },
+      "success-subtle": {
+        "$type": "color",
+        "$value": "#2E4400",
+        "$description": "Discount tag background on dark — deep green. Primitive: color/green/800."
+      },
+      "danger-subtle": {
+        "$type": "color",
+        "$value": "#991B1B",
+        "$description": "Urgent tag background on dark — deep red. Primitive: color/red/800."
+      }
+    },
+    "text": {
+      "primary": {
+        "$type": "color",
+        "$value": "#1A1A1A",
+        "$description": "Badge text — on primary (yellow) background."
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "#FFFFFF"
+      },
+      "danger": {
+        "$type": "color",
+        "$value": "#D42222",
+        "$description": "Badge text — danger. → text/error."
+      },
+      "success": {
+        "$type": "color",
+        "$value": "#496B00",
+        "$description": "Badge text — success. → text/success."
+      },
+      "warning": {
+        "$type": "color",
+        "$value": "#8A4A0C"
+      },
+      "info": {
+        "$type": "color",
+        "$value": "#524008",
+        "$description": "Badge text — info. Upgrade to semantic in v0.4."
+      },
+      "instant": {
+        "$type": "color",
+        "$value": "#FFF8D6",
+        "$description": "Instant / ETA tag label on dark. Primitive: color/yellow/100."
+      },
+      "instant-icon": {
+        "$type": "color",
+        "$value": "#FFD44F",
+        "$description": "Instant bolt glyph on dark. Primitive: color/yellow/400."
+      },
+      "success-subtle": {
+        "$type": "color",
+        "$value": "#E4FFB8",
+        "$description": "Discount tag label on dark. Primitive: color/green/100."
+      },
+      "danger-subtle": {
+        "$type": "color",
+        "$value": "#FFE0E0",
+        "$description": "Urgent tag label on dark. Primitive: color/red/100."
+      }
+    }
+  },
+  "tabbar": {
+    "bg": {
+      "active": {
+        "$type": "color",
+        "$value": "#B3EEFF"
+      }
+    },
+    "icon": {
+      "active": {
+        "$type": "color",
+        "$value": "#00C3FF"
+      },
+      "default": {
+        "$type": "color",
+        "$value": "#7E8080"
+      }
+    }
+  },
+  "search": {
+    "bg": {
+      "default": {
+        "$type": "color",
+        "$value": "#FBFAF7"
+      },
+      "active": {
+        "$type": "color",
+        "$value": "#F5F5F5"
+      }
+    },
+    "border": {
+      "default": {
+        "$type": "color",
+        "$value": "#DDDDDD"
+      },
+      "active": {
+        "$type": "color",
+        "$value": "#7E8080"
+      }
+    }
+  },
+  "notification": {
+    "text": {
+      "primary": {
+        "$type": "color",
+        "$value": "#1A1A1A",
+        "$description": "Notification text — primary variant."
+      },
+      "warning": {
+        "$type": "color",
+        "$value": "#8A4A0C"
+      },
+      "danger": {
+        "$type": "color",
+        "$value": "#D42222",
+        "$description": "Notification text — danger. → text/error."
+      },
+      "info": {
+        "$type": "color",
+        "$value": "#524008"
+      }
+    },
+    "bg": {
+      "default": {
+        "$type": "color",
+        "$value": "#FBFAF7"
+      },
+      "warning": {
+        "$type": "color",
+        "$value": "#FFF8EE"
+      },
+      "danger": {
+        "$type": "color",
+        "$value": "#FFE0E0"
+      },
+      "info": {
+        "$type": "color",
+        "$value": "#FFF8D6"
+      }
+    }
+  },
+  "nav": {
+    "icon": {
+      "default": {
+        "$type": "color",
+        "$value": "#7E8080"
+      },
+      "active": {
+        "$type": "color",
+        "$value": "#00C3FF"
+      }
+    }
+  },
+  "input": {
+    "icon": {
+      "default": {
+        "$type": "color",
+        "$value": "#AAAAAA"
+      },
+      "active": {
+        "$type": "color",
+        "$value": "#1A1A1A"
+      }
+    },
+    "border": {
+      "default": {
+        "$type": "color",
+        "$value": "#DDDDDD"
+      },
+      "active": {
+        "$type": "color",
+        "$value": "#7E8080"
+      },
+      "error": {
+        "$type": "color",
+        "$value": "#FF9A9A"
+      }
+    },
+    "bg": {
+      "default": {
+        "$type": "color",
+        "$value": "#FFFFFF"
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "#DDDDDD"
+      }
+    },
+    "label": {
+      "color": {
+        "$type": "color",
+        "$value": "#666666"
+      }
+    },
+    "placeholder": {
+      "color": {
+        "$type": "color",
+        "$value": "#AAAAAA"
+      }
+    },
+    "helper": {
+      "color": {
+        "$type": "color",
+        "$value": "#AAAAAA"
+      }
+    }
+  },
+  "rating": {
+    "icon": {
+      "filled": {
+        "$type": "color",
+        "$value": "#FFCC27"
+      },
+      "empty": {
+        "$type": "color",
+        "$value": "#AAAAAA"
+      }
+    }
+  },
+  "button": {
+    "bg": {
+      "default": {
+        "$type": "color",
+        "$value": "#FFFFFF"
+      }
+    },
+    "icon": {
+      "danger": {
+        "$type": "color",
+        "$value": "#EF4444"
+      },
+      "ghost": {
+        "$type": "color",
+        "$value": "#7E8080"
+      }
+    }
+  },
+  "toggle": {
+    "bg": {
+      "on": {
+        "$type": "color",
+        "$value": "#00C3FF"
+      },
+      "off": {
+        "$type": "color",
+        "$value": "#DDDDDD"
+      }
+    },
+    "thumb": {
+      "color": {
+        "$type": "color",
+        "$value": "#FFFFFF"
+      }
+    }
+  },
+  "checkbox": {
+    "bg": {
+      "checked": {
+        "$type": "color",
+        "$value": "#00C3FF"
+      },
+      "default": {
+        "$type": "color",
+        "$value": "#FFFFFF"
+      }
+    },
+    "border": {
+      "default": {
+        "$type": "color",
+        "$value": "#DDDDDD"
+      },
+      "checked": {
+        "$type": "color",
+        "$value": "#00C3FF"
+      }
+    },
+    "icon": {
+      "checked": {
+        "$type": "color",
+        "$value": "#FFFFFF"
+      }
+    }
+  },
+  "radio": {
+    "border": {
+      "default": {
+        "$type": "color",
+        "$value": "#DDDDDD"
+      },
+      "selected": {
+        "$type": "color",
+        "$value": "#00C3FF"
+      }
+    },
+    "dot": {
+      "color": {
+        "$type": "color",
+        "$value": "#00C3FF"
+      }
+    }
+  },
+  "avatar": {
+    "bg": {
+      "primary": {
+        "$type": "color",
+        "$value": "#B3EEFF"
+      },
+      "neutral": {
+        "$type": "color",
+        "$value": "#F5F5F5"
+      }
+    },
+    "text": {
+      "color": {
+        "$type": "color",
+        "$value": "#00A8DC"
+      }
+    },
+    "border": {
+      "color": {
+        "$type": "color",
+        "$value": "#DDDDDD"
+      }
+    },
+    "disabled": {
+      "overlay": {
+        "$type": "color",
+        "$value": "rgba(255, 255, 255, 0.6)"
+      }
+    }
+  },
+  "divider": {
+    "color": {
+      "default": {
+        "$type": "color",
+        "$value": "#DDDDDD"
+      },
+      "strong": {
+        "$type": "color",
+        "$value": "#7E8080"
+      }
+    }
+  },
+  "tooltip": {
+    "bg": {
+      "color": {
+        "$type": "color",
+        "$value": "#1A1A1A"
+      }
+    },
+    "text": {
+      "color": {
+        "$type": "color",
+        "$value": "#FFFFFF"
+      }
+    }
+  },
+  "btn": {
+    "primary": {
+      "bg": {
+        "$type": "color",
+        "$value": "#00C3FF",
+        "$description": "Primary btn bg — brand-default"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "#00A8DC",
+        "$description": "Primary hover bg"
+      },
+      "bg-active": {
+        "$type": "color",
+        "$value": "#00A8DC",
+        "$description": "Primary active bg"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#FFFFFF",
+        "$description": "Primary btn label"
+      },
+      "ring": {
+        "$type": "color",
+        "$value": "rgba(0, 195, 255, 0.4)"
+      }
+    },
+    "secondary": {
+      "bg": {
+        "$type": "color",
+        "$value": "#FFCC27",
+        "$description": "Secondary btn bg"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "#E6B400",
+        "$description": "Secondary hover bg"
+      },
+      "bg-active": {
+        "$type": "color",
+        "$value": "#E6B400",
+        "$description": "Secondary active (pressed) bg — darker gold (matches light; was brown #B86819)."
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#7A4A00",
+        "$description": "Secondary btn label — dark amber on the yellow bg (matches light)."
+      },
+      "ring": {
+        "$type": "color",
+        "$value": "rgba(255, 204, 38, 0.4)"
+      }
+    },
+    "outline": {
+      "bg-hover": {
+        "$type": "color",
+        "$value": "#B3EEFF",
+        "$description": "Outline hover bg"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#1A1A1A",
+        "$description": "Outline btn label"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "#DDDDDD",
+        "$description": "Outline btn border"
+      },
+      "ring": {
+        "$type": "color",
+        "$value": "#008AB5"
+      },
+      "bg-active": {
+        "$type": "color",
+        "$value": "#F5F5F5"
+      }
+    },
+    "destructive": {
+      "bg": {
+        "$type": "color",
+        "$value": "#EF4444",
+        "$description": "Destructive bg — error red"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "#D42222",
+        "$description": "Destructive hover"
+      },
+      "bg-active": {
+        "$type": "color",
+        "$value": "#B91C1C",
+        "$description": "Destructive active"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#FFFFFF",
+        "$description": "Destructive label"
+      },
+      "ring": {
+        "$type": "color",
+        "$value": "rgba(240, 69, 69, 0.4)"
+      }
+    },
+    "disabled": {
+      "text": {
+        "$type": "color",
+        "$value": "#7E8080",
+        "$description": "Disabled label — all types"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "#DDDDDD"
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "#DDDDDD",
+        "$description": "Disabled bg — all types"
+      }
+    },
+    "tertiary": {
+      "text": {
+        "$type": "color",
+        "$value": "#FFFFFF"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "#0F6277"
+      },
+      "bg-active": {
+        "$type": "color",
+        "$value": "#134453"
+      },
+      "ring": {
+        "$type": "color",
+        "$value": "rgba(26, 26, 26, 0.3)"
+      },
+      "bg": {
+        "$type": "color",
+        "$value": "#135163"
+      }
+    },
+    "pill": {
+      "bg": {
+        "$type": "color",
+        "$value": "#FFFFFF"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "#FBFAF7"
+      },
+      "bg-active": {
+        "$type": "color",
+        "$value": "#F5F5F5"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "#F5F5F5"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#0ACBFF"
+      },
+      "ring": {
+        "$type": "color",
+        "$value": "rgba(10, 203, 255, 0.3)"
+      }
+    }
+  }
+}

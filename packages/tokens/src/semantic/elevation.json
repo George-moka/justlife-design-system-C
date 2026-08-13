@@ -1,0 +1,18 @@
+{
+  "$description": "Hand-authored elevation geometry. Figma stores shadow geometry in effect styles (not variables); only the shadow colour is a variable. These composites pair tuned geometry with the brand shadow colour.",
+  "elevation": {
+    "$type": "shadow",
+    "none": {
+      "$value": { "color": "rgba(26,26,26,0)", "offsetX": 0, "offsetY": 0, "blur": 0, "spread": 0 }
+    },
+    "raised": {
+      "$value": { "color": "rgba(26,26,26,0.08)", "offsetX": 0, "offsetY": 1, "blur": 3, "spread": 0 }
+    },
+    "overlay": {
+      "$value": { "color": "rgba(26,26,26,0.12)", "offsetX": 0, "offsetY": 6, "blur": 16, "spread": 0 }
+    },
+    "sheet": {
+      "$value": { "color": "rgba(26,26,26,0.16)", "offsetX": 0, "offsetY": -2, "blur": 12, "spread": 0 }
+    }
+  }
+}

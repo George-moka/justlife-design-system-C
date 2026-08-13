@@ -1,0 +1,72 @@
+{
+  "$description": "Hand-authored semantic scales. Figma encodes spacing/radius via direct `size` usage and breakpoints/z-index outside variables, so these roles are a justified code-side addition that aliases the real `size` primitives where possible.",
+  "space": {
+    "$type": "dimension",
+    "none": { "$value": "{size.0}" },
+    "xs": { "$value": "{size.4}" },
+    "sm": { "$value": "{size.8}" },
+    "default": { "$value": "{size.8}", "$description": "DS rule: default horizontal spacing = 8px." },
+    "md": { "$value": "{size.16}" },
+    "lg": { "$value": "{size.24}" },
+    "xl": { "$value": "{size.32}" },
+    "2xl": { "$value": "{size.48}" }
+  },
+  "radius": {
+    "$type": "dimension",
+    "none": { "$value": "{size.0}" },
+    "sm": { "$value": "{size.4}" },
+    "md": { "$value": "{size.8}" },
+    "default": { "$value": "{size.12}", "$description": "DS rule: default corner radius = 12px. Controls and cards inherit this." },
+    "lg": { "$value": "{size.12}" },
+    "xl": { "$value": "{size.16}" },
+    "2xl": { "$value": "{size.24}" },
+    "pill": { "$value": 999 },
+    "control": { "$value": "{radius.default}" },
+    "card": { "$value": "{radius.default}" }
+  },
+  "borderWidth": {
+    "$type": "dimension",
+    "none": { "$value": "{size.0}" },
+    "default": { "$value": "{size.half}", "$description": "DS rule: default stroke weight = 0.5px." },
+    "hairline": { "$value": "{size.half}" },
+    "thin": { "$value": "{size.1}" },
+    "thick": { "$value": "{size.2}" }
+  },
+  "iconSize": {
+    "$type": "dimension",
+    "xs": { "$value": "{size.12}" },
+    "sm": { "$value": "{size.16}" },
+    "md": { "$value": "{size.20}" },
+    "lg": { "$value": "{size.24}" },
+    "xl": { "$value": "{size.32}" }
+  },
+  "touchTarget": {
+    "$type": "dimension",
+    "min": { "$value": "{size.48}" },
+    "comfortable": { "$value": "{size.56}" }
+  },
+  "safeArea": {
+    "$type": "dimension",
+    "$description": "Device safe-area insets (iOS reference device). Bottom-anchored floating/docked bars clear the home indicator; top reserves the status bar / notch.",
+    "top": { "$value": 44, "$description": "Status-bar / notch inset (px)." },
+    "bottom": { "$value": 34, "$description": "Home-indicator inset (px). Floating price bars and the bottom nav sit this far above the screen edge, matching iOS / Instagram." }
+  },
+  "breakpoint": {
+    "$type": "dimension",
+    "sm": { "$value": 480 },
+    "md": { "$value": 768 },
+    "lg": { "$value": 1024 },
+    "xl": { "$value": 1280 }
+  },
+  "zIndex": {
+    "$type": "number",
+    "base": { "$value": 0 },
+    "dropdown": { "$value": 1000 },
+    "sticky": { "$value": 1100 },
+    "banner": { "$value": 1200 },
+    "overlay": { "$value": 1300 },
+    "modal": { "$value": 1400 },
+    "toast": { "$value": 1500 },
+    "tooltip": { "$value": 1600 }
+  }
+}

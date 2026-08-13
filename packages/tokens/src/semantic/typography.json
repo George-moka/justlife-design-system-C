@@ -1,0 +1,60 @@
+{
+  "$description": "Typography roles mirrored from the Figma Mobile text styles (mobile-first). Composed from the real font primitives. Web/desktop styles can be layered on later.",
+  "typography": {
+    "$type": "typography",
+    "displayMedium": {
+      "$value": { "fontFamily": "{font-family.poppins}", "fontWeight": "{font-weight.semibold}", "fontSize": "{font-size.48}", "lineHeight": "{line-height.56}", "letterSpacing": 0 }
+    },
+    "headlineXLarge": {
+      "$value": { "fontFamily": "{font-family.poppins}", "fontWeight": "{font-weight.semibold}", "fontSize": "{font-size.40}", "lineHeight": "{line-height.48}", "letterSpacing": 0 }
+    },
+    "headlineLarge": {
+      "$value": { "fontFamily": "{font-family.poppins}", "fontWeight": "{font-weight.semibold}", "fontSize": "{font-size.32}", "lineHeight": "{line-height.40}", "letterSpacing": 0 }
+    },
+    "headlineMedium": {
+      "$value": { "fontFamily": "{font-family.poppins}", "fontWeight": "{font-weight.semibold}", "fontSize": "{font-size.28}", "lineHeight": "{line-height.36}", "letterSpacing": 0 }
+    },
+    "headlineSmall": {
+      "$value": { "fontFamily": "{font-family.poppins}", "fontWeight": "{font-weight.semibold}", "fontSize": "{font-size.23}", "lineHeight": "{line-height.32}", "letterSpacing": 0 }
+    },
+    "titleLarge": {
+      "$value": { "fontFamily": "{font-family.poppins}", "fontWeight": "{font-weight.semibold}", "fontSize": "{font-size.19}", "lineHeight": "{line-height.28}", "letterSpacing": 0 }
+    },
+    "titleMedium": {
+      "$value": { "fontFamily": "{font-family.poppins}", "fontWeight": "{font-weight.semibold}", "fontSize": "{font-size.15}", "lineHeight": "{line-height.24}", "letterSpacing": 0 }
+    },
+    "titleSmall": {
+      "$value": { "fontFamily": "{font-family.poppins}", "fontWeight": "{font-weight.semibold}", "fontSize": "{font-size.13}", "lineHeight": "{line-height.20}", "letterSpacing": 0 }
+    },
+    "bodyLarge": {
+      "$value": { "fontFamily": "{font-family.poppins}", "fontWeight": "{font-weight.regular}", "fontSize": "{font-size.15}", "lineHeight": "{line-height.24}", "letterSpacing": 0 }
+    },
+    "bodyMedium": {
+      "$value": { "fontFamily": "{font-family.poppins}", "fontWeight": "{font-weight.regular}", "fontSize": "{font-size.13}", "lineHeight": "{line-height.20}", "letterSpacing": 0.15 }
+    },
+    "bodyBase": {
+      "$value": { "fontFamily": "{font-family.poppins}", "fontWeight": "{font-weight.regular}", "fontSize": "{font-size.13}", "lineHeight": "{line-height.18}", "letterSpacing": 0 }
+    },
+    "bodyXSmall": {
+      "$value": { "fontFamily": "{font-family.poppins}", "fontWeight": "{font-weight.regular}", "fontSize": "{font-size.11}", "lineHeight": "{line-height.14}", "letterSpacing": 0.1 }
+    },
+    "bodyMicro": {
+      "$value": { "fontFamily": "{font-family.poppins}", "fontWeight": "{font-weight.regular}", "fontSize": "{font-size.9}", "lineHeight": "{line-height.13}", "letterSpacing": 0.25 }
+    },
+    "labelLarge": {
+      "$value": { "fontFamily": "{font-family.poppins}", "fontWeight": "{font-weight.medium}", "fontSize": "{font-size.15}", "lineHeight": "{line-height.24}", "letterSpacing": 0 }
+    },
+    "labelMedium": {
+      "$value": { "fontFamily": "{font-family.poppins}", "fontWeight": "{font-weight.medium}", "fontSize": "{font-size.13}", "lineHeight": "{line-height.20}", "letterSpacing": 0 }
+    },
+    "labelBase": {
+      "$value": { "fontFamily": "{font-family.poppins}", "fontWeight": "{font-weight.semibold}", "fontSize": "{font-size.13}", "lineHeight": "{line-height.18}", "letterSpacing": 0 }
+    },
+    "labelXSmall": {
+      "$value": { "fontFamily": "{font-family.poppins}", "fontWeight": "{font-weight.semibold}", "fontSize": "{font-size.11}", "lineHeight": "{line-height.14}", "letterSpacing": 0 }
+    },
+    "labelXXSmall": {
+      "$value": { "fontFamily": "{font-family.poppins}", "fontWeight": "{font-weight.semibold}", "fontSize": "{font-size.9}", "lineHeight": "{line-height.13}", "letterSpacing": 0 }
+    }
+  }
+}

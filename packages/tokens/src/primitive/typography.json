@@ -1,0 +1,265 @@
+{
+  "font-weight": {
+    "regular": {
+      "$type": "fontWeight",
+      "$value": "400",
+      "$description": "400 — Regular weight. Body copy, descriptions."
+    },
+    "medium": {
+      "$type": "fontWeight",
+      "$value": "500",
+      "$description": "500 — Medium weight. Labels, secondary emphasis."
+    },
+    "semibold": {
+      "$type": "fontWeight",
+      "$value": "600",
+      "$description": "600 — SemiBold weight. Titles, active states. Code: map <b>/<strong> (default 700) to 600."
+    },
+    "extrabold": {
+      "$type": "fontWeight",
+      "$value": "800",
+      "$description": "NOT in use — Poppins is capped at SemiBold (600) per DS rule."
+    },
+    "black": {
+      "$type": "fontWeight",
+      "$value": "900",
+      "$description": "NOT in use — Poppins is capped at SemiBold (600) per DS rule."
+    }
+  },
+  "font-family": {
+    "poppins": {
+      "$type": "fontFamily",
+      "$value": "Poppins"
+    }
+  },
+  "font-size": {
+    "9": {
+      "$type": "dimension",
+      "$value": 9,
+      "$description": "9px — minimum mobile compact scale"
+    },
+    "10": {
+      "$type": "dimension",
+      "$value": 10,
+      "$description": "10px — very small labels. Counters, secondary micro text."
+    },
+    "11": {
+      "$type": "dimension",
+      "$value": 11,
+      "$description": "11px — compact labels. Dense UI elements."
+    },
+    "12": {
+      "$type": "dimension",
+      "$value": 12,
+      "$description": "12px — small body. Secondary descriptions, captions."
+    },
+    "13": {
+      "$type": "dimension",
+      "$value": 13,
+      "$description": "13px — intermediate size between body-sm (12) and body-md (14). Used for label/labelBase."
+    },
+    "14": {
+      "$type": "dimension",
+      "$value": 14,
+      "$description": "14px — default body text. (Parity: replaced by 15/13 in active roles; kept for the ramp.)"
+    },
+    "15": {
+      "$type": "dimension",
+      "$value": 15,
+      "$description": "15px — large body / default title (odd-parity replacement for 16 in active roles)."
+    },
+    "16": {
+      "$type": "dimension",
+      "$value": 16,
+      "$description": "16px — (Parity: replaced by 15 in active roles; kept for the ramp.)"
+    },
+    "19": {
+      "$type": "dimension",
+      "$value": 19,
+      "$description": "19px — large title (odd-parity replacement for 20 in active roles)."
+    },
+    "20": {
+      "$type": "dimension",
+      "$value": 20,
+      "$description": "20px — (Parity: replaced by 19 in active roles; kept for the ramp.)"
+    },
+    "23": {
+      "$type": "dimension",
+      "$value": 23,
+      "$description": "23px — small headline (odd-parity replacement for 24 in active roles)."
+    },
+    "24": {
+      "$type": "dimension",
+      "$value": 24,
+      "$description": "24px — (Parity: replaced by 23 in active roles; kept for the ramp.)"
+    },
+    "28": {
+      "$type": "dimension",
+      "$value": 28,
+      "$description": "28px — medium headline. Sub-page headers."
+    },
+    "32": {
+      "$type": "dimension",
+      "$value": 32,
+      "$description": "32px — large headline. Page section titles."
+    },
+    "36": {
+      "$type": "dimension",
+      "$value": 36,
+      "$description": "36px — extra large headline."
+    },
+    "40": {
+      "$type": "dimension",
+      "$value": 40,
+      "$description": "40px — headline. Major page titles."
+    },
+    "48": {
+      "$type": "dimension",
+      "$value": 48,
+      "$description": "48px — display. Hero and marketing banners."
+    },
+    "56": {
+      "$type": "dimension",
+      "$value": 56,
+      "$description": "56px — large display."
+    },
+    "60": {
+      "$type": "dimension",
+      "$value": 60,
+      "$description": "60px font size — headline-xl"
+    },
+    "72": {
+      "$type": "dimension",
+      "$value": 72,
+      "$description": "72px — maximum display size."
+    }
+  },
+  "line-height": {
+    "12": {
+      "$type": "dimension",
+      "$value": 12,
+      "$description": "12px line height — micro text (9–10px)."
+    },
+    "13": {
+      "$type": "dimension",
+      "$value": 13,
+      "$description": "13px line height — 10–11px text."
+    },
+    "14": {
+      "$type": "dimension",
+      "$value": 14,
+      "$description": "14px — line height for 11px text."
+    },
+    "15": {
+      "$type": "dimension",
+      "$value": 15
+    },
+    "16": {
+      "$type": "dimension",
+      "$value": 16,
+      "$description": "16px — line height for 12px text."
+    },
+    "18": {
+      "$type": "dimension",
+      "$value": 18,
+      "$description": "18px — line height for 13px text (1.38 ratio)."
+    },
+    "19": {
+      "$type": "dimension",
+      "$value": 19
+    },
+    "20": {
+      "$type": "dimension",
+      "$value": 20,
+      "$description": "20px — line height for 14px text."
+    },
+    "23": {
+      "$type": "dimension",
+      "$value": 23
+    },
+    "24": {
+      "$type": "dimension",
+      "$value": 24,
+      "$description": "24px — line height for 16px text."
+    },
+    "28": {
+      "$type": "dimension",
+      "$value": 28,
+      "$description": "28px — line height for 20px title."
+    },
+    "30": {
+      "$type": "dimension",
+      "$value": 30
+    },
+    "32": {
+      "$type": "dimension",
+      "$value": 32,
+      "$description": "32px — line height for 24px headline."
+    },
+    "34": {
+      "$type": "dimension",
+      "$value": 34
+    },
+    "36": {
+      "$type": "dimension",
+      "$value": 36,
+      "$description": "36px — line height for 28px headline."
+    },
+    "37": {
+      "$type": "dimension",
+      "$value": 37
+    },
+    "40": {
+      "$type": "dimension",
+      "$value": 40,
+      "$description": "40px — line height for 32px headline."
+    },
+    "44": {
+      "$type": "dimension",
+      "$value": 44,
+      "$description": "44px — line height for 36px text."
+    },
+    "45": {
+      "$type": "dimension",
+      "$value": 45
+    },
+    "48": {
+      "$type": "dimension",
+      "$value": 48,
+      "$description": "48px — line height for 40px headline."
+    },
+    "56": {
+      "$type": "dimension",
+      "$value": 56,
+      "$description": "56px — line height for 48px display."
+    },
+    "58": {
+      "$type": "dimension",
+      "$value": 58
+    },
+    "60": {
+      "$type": "dimension",
+      "$value": 60,
+      "$description": "60px — line height for 56px display."
+    },
+    "65": {
+      "$type": "dimension",
+      "$value": 65
+    },
+    "72": {
+      "$type": "dimension",
+      "$value": 72,
+      "$description": "72px — line height for 60-72px display."
+    },
+    "80": {
+      "$type": "dimension",
+      "$value": 80,
+      "$description": "80px — expanded line height."
+    },
+    "88": {
+      "$type": "dimension",
+      "$value": 88,
+      "$description": "88px — maximum line height."
+    }
+  }
+}

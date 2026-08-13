@@ -1,0 +1,18 @@
+{
+  "$description": "Motion tokens — a code-side addition (Figma encodes no motion variables; authorised by the DS owner). Durations are in milliseconds (raw number in TS for RN Animated; emitted as `ms` in CSS). Easings are cubic-bezier control points — spread into RN `Easing.bezier(...)` or rendered as CSS `cubic-bezier(...)`.",
+  "motion": {
+    "duration": {
+      "$type": "duration",
+      "instant": { "$value": 0 },
+      "fast": { "$value": 120, "$description": "Micro-feedback: taps, small toggles." },
+      "medium": { "$value": 200, "$description": "Default UI transition: shrink/expand, show/hide." },
+      "slow": { "$value": 320, "$description": "Larger surfaces: sheets, full-width reveals." }
+    },
+    "easing": {
+      "$type": "cubicBezier",
+      "standard": { "$value": [0.4, 0, 0.2, 1], "$description": "Default ease-in-out for most transitions." },
+      "decelerate": { "$value": [0, 0, 0.2, 1], "$description": "Entering / expanding elements." },
+      "accelerate": { "$value": [0.4, 0, 1, 1], "$description": "Exiting / collapsing elements." }
+    }
+  }
+}
