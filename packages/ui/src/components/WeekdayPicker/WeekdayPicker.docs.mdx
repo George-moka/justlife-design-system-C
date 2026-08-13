@@ -1,0 +1,36 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as WeekdayPickerStories from './WeekdayPicker.stories';
+
+<Meta of={WeekdayPickerStories} />
+
+# WeekdayPicker
+
+## Purpose
+
+A row of seven **multi-select** day chips (single-letter labels) for choosing which weekdays a recurring
+booking repeats on — the booking funnel’s recurring-frequency expansion.
+
+## Usage
+
+- Pass `value` (selected keys) and `onToggle`; `days` defaults to Mon→Sun (`DEFAULT_WEEKDAYS`).
+- Composes `Selectable` and spreads the seven chips evenly across the width.
+
+<Canvas of={WeekdayPickerStories.Default} />
+
+## Do not use
+
+- ❌ For a single calendar date — that's `DatePicker`. ❌ For times — that's `TimeSlotPicker`.
+
+## States
+
+Per-chip: default · selected (brand fill). Multi-select — several days can be on at once.
+
+## Accessibility
+
+Each day is a `Selectable` button with `accessibilityState.selected`; pass full day keys for clearer
+screen-reader labels.
+
+## Tokens used
+
+`size.40` (chip height) · `space.sm` (gap, via `HStack`) · plus `Selectable`’s tokens. Chips `flex: 1` to
+fill the width evenly with a token gap (not `justify="space-between"`, whose gaps aren't a token).

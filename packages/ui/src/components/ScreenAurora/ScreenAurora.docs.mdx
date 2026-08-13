@@ -1,0 +1,30 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as ScreenAuroraStories from './ScreenAurora.stories';
+
+<Meta of={ScreenAuroraStories} />
+
+# ScreenAurora
+
+## Purpose
+
+The soft brand **"aurora" band** used behind layered screen headers — the booking-funnel steps and the
+Profile hero. A paper base with two diffuse brand glows that the rounded content card sits over.
+
+## Usage
+
+- Drop it into `PageShell`'s `band` slot: `band={<ScreenAurora />}`.
+- It fills its parent (`flex: 1`); pass `style` to tweak.
+
+<Canvas of={ScreenAuroraStories.Default} />
+
+## Do not use
+
+- ❌ As a general gradient/glow primitive — that's `RadialGlow` (this is the specific branded band).
+
+## Accessibility
+
+Purely decorative background; carries no semantics.
+
+## Tokens used
+
+`background.paper` (base) · `background.brandDefault` (glows). Composes `RadialGlow`.

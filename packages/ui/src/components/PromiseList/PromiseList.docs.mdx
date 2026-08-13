@@ -1,0 +1,38 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as PromiseListStories from './PromiseList.stories';
+
+<Meta of={PromiseListStories} />
+
+# PromiseList
+
+## Purpose
+
+The booking funnel’s **"justlife Promise"** — a quiet, centred reassurance block that sits **tone-on-tone with
+the paper**. A faint, faded single-tone seal over a pale heading and centred `title + description` pairs in soft
+greys. Deliberately low-contrast so it whispers reassurance without competing with the cards above it.
+
+## Usage
+
+- Pass `items` (`{ title, desc }[]`); optionally a `title` string (the heading) and a `seal` Lucide icon
+  name (defaults to a shield-check).
+
+<Canvas of={PromiseListStories.Default} />
+
+## Do not use
+
+- ❌ For tappable settings rows — that's `ListRow`.
+- ❌ For a single highlighted notice — that's `InfoCard`.
+- ❌ Don't re-introduce brand colour, a card/background, or emphasis here — the block is meant to recede.
+
+## Variants
+
+`title` may be omitted (just the seal over the points). Paleness steps **down**: titles → heading → seal.
+
+## Accessibility
+
+The seal is decorative; the title/description carry the meaning as text.
+
+## Tokens used
+
+`space.lg` / `space.md` (gaps) · `icon.disabled` + `opacity.40` (faded seal) · `text.tertiary` (heading +
+description) · `text.secondary` (point titles) · text roles `titleMedium` / `labelBase` / `bodyXSmall`.

@@ -1,0 +1,39 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as QuestionStories from './Question.stories';
+
+<Meta of={QuestionStories} />
+
+# Question
+
+## Purpose
+
+A labelled **form section**: a title (with an optional inline info icon) over its control. Used to stack the
+steps of the booking funnel — "When would you like your service?", "Which professional do you prefer?", etc.
+
+## Usage
+
+- Pass a `title` and the control(s) as `children`; set `info` to show an inline info icon after the title.
+- The **title is inset** by `space.md`; the **children are full-bleed**, so a horizontal picker can manage
+  its own edge inset and bleed to the screen edges.
+
+<Canvas of={QuestionStories.Default} />
+
+## Do not use
+
+- ❌ As a card — it has no surface/border; it's a layout section.
+- ❌ For a single labelled text input — use `Input`'s own label.
+
+## Variants
+
+`info` toggles the inline info icon. Otherwise the content is whatever you nest.
+
+<Controls />
+
+## Accessibility
+
+The title is `labelLarge` text; the info icon is decorative. Ensure the nested control carries its own
+labels.
+
+## Tokens used
+
+`space.md` (title inset) · `space.sm` (gap, via `VStack`) · `icon.secondary` (info icon).

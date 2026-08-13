@@ -1,0 +1,41 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as PlanSelectCardStories from './PlanSelectCard.stories';
+
+<Meta of={PlanSelectCardStories} />
+
+# PlanSelectCard
+
+## Purpose
+
+A vertical, selectable **plan card** — title (+ optional discount badge), a radio indicator, a divider,
+benefit bullets, and optional expanded content. Built for the booking funnel’s frequency choice (One Time /
+Recurring / Monthly).
+
+## Usage
+
+- Pass `selected`, `onPress`, `title`, `bullets`; optionally `discount`, `popular` (the "Most Popular"
+  ribbon), and `children` (expanded content revealed when selected — e.g. recurring options).
+- It **composes `SelectableCard`**, so the selected fill + brand border + press behaviour stay identical to
+  every other selectable card.
+
+<Canvas of={PlanSelectCardStories.FrequencyPlans} />
+
+## Do not use
+
+- ❌ As a generic selectable row with an icon + trailing control — that's `SelectableCard` directly.
+- ❌ For a small inline chip — that's `Selectable`.
+
+## States
+
+Per-card: default · selected (brand fill + border, radio filled) · pressed. Lay several out as a
+single-select group.
+
+## Accessibility
+
+Composes `SelectableCard` → `accessibilityRole="button"` with `accessibilityState.selected`; the visible
+`Radio` is decorative (`pointerEvents="none"`). The whole card is the press target.
+
+## Tokens used
+
+`size.8` (ribbon overhang) · `space.md` · `borderWidth.hairline` · `divider.color.default` · plus
+`SelectableCard`’s box tokens (`radius.default`, `background.selected`, `border.brandDefault`).

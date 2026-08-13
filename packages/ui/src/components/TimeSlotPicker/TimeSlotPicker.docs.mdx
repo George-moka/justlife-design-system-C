@@ -1,0 +1,35 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as TimeSlotPickerStories from './TimeSlotPicker.stories';
+
+<Meta of={TimeSlotPickerStories} />
+
+# TimeSlotPicker
+
+## Purpose
+
+A horizontal row of single-select **time-range chips** for choosing a service start time — the booking
+funnel’s Date & Time step.
+
+## Usage
+
+- Pass `slots` (string labels like `"12:30 – 13:00"`), the selected `value`, and `onChange`.
+- Composes `Selectable`; scrolls horizontally and owns its side inset.
+
+<Canvas of={TimeSlotPickerStories.Default} />
+
+## Do not use
+
+- ❌ For dates — that's `DatePicker`. ❌ For weekdays — that's `WeekdayPicker`.
+- ❌ With raw colours/sizes — every value comes from tokens.
+
+## States
+
+Per-chip: default · selected (brand fill) · disabled (via `Selectable`). Single-select across the row.
+
+## Accessibility
+
+Each slot is a `Selectable` button labelled by its visible time range.
+
+## Tokens used
+
+`size.40` (chip height) · `size.8` (gap) · `space.md` · plus `Selectable`’s tokens.

@@ -1,0 +1,91 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as ToastStories from './Toast.stories';
+
+<Meta of={ToastStories} />
+
+# Toast / Snackbar
+
+## Purpose
+
+`Toast` is a **transient, self-dismissing message bar** for brief feedback after an action — "Booking
+confirmed", "Voucher applied", "Couldn’t apply that code". It floats above the screen, auto-dismisses, and
+never blocks the UI.
+
+It is a chubby **liquid-glass** pill (the DS `GlassSurface`) that refracts the content behind it — like an
+iOS notification. Every tone shares that one glass shell; the tone is carried by a **coloured leading
+icon**, not by tinting the whole bar. Dark text keeps it legible on the light glass.
+
+## Usage
+
+Drive toasts imperatively. Wrap your app/screen once in `ToastProvider`, then call `useToast()`:
+
+```tsx
+<ToastProvider position="top" insets={{ top: safeAreaTop }}>
+  <App />
+</ToastProvider>;
+
+// anywhere inside:
+const toast = useToast();
+toast.success('Booking confirmed');
+toast.error('Code expired', { action: { label: 'Retry', onPress: retry } });
+const id = toast.show('Address removed', { action: { label: 'Undo', onPress: undo } });
+toast.dismiss(id);
+```
+
+<Canvas of={ToastStories.Interactive} />
+
+- One toast shows at a time; further calls **queue** and appear in turn.
+- It **slides in from the top** (default) and can be **swiped back up to dismiss**.
+- **Auto-dismiss**: 6s when there's an action, 4s otherwise. Pass `duration: 0` to keep it sticky.
+- The **✕** shows when there's no action; force it either way with `dismissible`.
+- The provider announces each message to screen readers and positions the bar above the safe-area inset.
+
+## Do not use
+
+- ❌ For errors that need a decision or block progress — use a `BottomSheet`/dialog, not a toast.
+- ❌ For long or formatted content — keep it to one short line (wraps to two, then truncates).
+- ❌ For more than one action — a toast carries a single action (e.g. "Undo").
+- ❌ With raw colours/sizes — every value comes from tokens.
+
+## Variants
+
+Tone: `neutral · success · error · info · warning`. Optional `action`, optional `✕` (`dismissible`),
+`position` `top | bottom`.
+
+<Canvas of={ToastStories.Tones} />
+<Canvas of={ToastStories.WithAction} />
+<Controls />
+
+## States
+
+Animating **in** (slide from the edge, `motion.decelerate`) · resting · dragging (follows the finger, with
+resistance away from the edge) · animating **out** (`motion.accelerate`, then unmounts). Action and ✕ dim
+on press.
+
+## Accessibility
+
+- The bar is an `accessibilityLiveRegion="polite"` region; **error** toasts use `role="alert"` (assertive).
+- `ToastProvider` also calls `AccessibilityInfo.announceForAccessibility` on show, for screen readers.
+- Action and ✕ are real buttons with labels; ✕ is labelled "Dismiss" and uses `hitSlop` for a ≥44px target.
+- Because toasts auto-dismiss, never put information **only** in a toast — mirror critical state elsewhere.
+
+## Responsive behavior
+
+Full-width within the screen's horizontal inset (`space.md`), pinned to the chosen edge above the
+safe-area inset. The message flexes; the action and ✕ keep their size.
+
+## Platform notes
+
+The slide is animated via the **`top` offset** (not `transform`/`opacity`, `useNativeDriver: false`) on
+purpose: web's `backdrop-filter` silently no-ops under a transformed ancestor, and native Liquid Glass
+breaks if an ancestor animates opacity — so both the glass and the motion survive together. A `setTimeout`
+settles the end state where `requestAnimationFrame` is throttled (headless preview). The overlay fills its
+**positioned parent** rather than portalling out, so it stays inside a device frame. Real backdrop blur
+needs varied content behind the bar (over flat paper it reads pale) — verify the glass material on device.
+
+## Tokens used
+
+`glass.*` (surface, via `GlassSurface`) · `text.primary` (message) · `text.brand` (action) · `icon.success`
+`icon.error` `icon.info` `icon.warning` `icon.primary` (leading glyph) · `icon.secondary` (✕) ·
+`radius.2xl` · `space.*` · `size.32/48/64/80` · `motion.duration.*` `motion.easing.*` · `zIndex.toast` ·
+`safeArea.*`.
