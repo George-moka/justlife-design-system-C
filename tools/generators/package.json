@@ -1,0 +1,7 @@
+{
+  "name": "@justlife/generators",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Plop generators that scaffold design-system components.",
+  "type": "module"
+}

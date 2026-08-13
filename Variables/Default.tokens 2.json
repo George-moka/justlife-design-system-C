@@ -1,0 +1,329 @@
+{
+  "size": {
+    "0": {
+      "$type": "number",
+      "$value": 0,
+      "$description": "0px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:8",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "1": {
+      "$type": "number",
+      "$value": 1,
+      "$description": "1px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11417:2",
+        "com.figma.scopes": [
+          "WIDTH_HEIGHT",
+          "GAP",
+          "STROKE_FLOAT"
+        ]
+      }
+    },
+    "2": {
+      "$type": "number",
+      "$value": 2,
+      "$description": "2px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:9",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "4": {
+      "$type": "number",
+      "$value": 4,
+      "$description": "4px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:10",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "6": {
+      "$type": "number",
+      "$value": 6,
+      "$description": "6px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:11",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "8": {
+      "$type": "number",
+      "$value": 8,
+      "$description": "8px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:12",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "10": {
+      "$type": "number",
+      "$value": 10,
+      "$description": "10px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:13",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "12": {
+      "$type": "number",
+      "$value": 12,
+      "$description": "12px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:14",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "14": {
+      "$type": "number",
+      "$value": 14,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:12708:2",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "16": {
+      "$type": "number",
+      "$value": 16,
+      "$description": "16px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:15",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "20": {
+      "$type": "number",
+      "$value": 20,
+      "$description": "20px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:16",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "24": {
+      "$type": "number",
+      "$value": 24,
+      "$description": "24px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:17",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "28": {
+      "$type": "number",
+      "$value": 28,
+      "$description": "28px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:18",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "32": {
+      "$type": "number",
+      "$value": 32,
+      "$description": "32px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:19",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "40": {
+      "$type": "number",
+      "$value": 40,
+      "$description": "40px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:20",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "48": {
+      "$type": "number",
+      "$value": 48,
+      "$description": "48px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:21",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "56": {
+      "$type": "number",
+      "$value": 56,
+      "$description": "56px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:22",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "64": {
+      "$type": "number",
+      "$value": 64,
+      "$description": "64px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:23",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "72": {
+      "$type": "number",
+      "$value": 72,
+      "$description": "72px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11417:3",
+        "com.figma.scopes": [
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "80": {
+      "$type": "number",
+      "$value": 80,
+      "$description": "80px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:24",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "96": {
+      "$type": "number",
+      "$value": 96,
+      "$description": "96px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:25",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "120": {
+      "$type": "number",
+      "$value": 120,
+      "$description": "120px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:26",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "160": {
+      "$type": "number",
+      "$value": 160,
+      "$description": "160px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:27",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "200": {
+      "$type": "number",
+      "$value": 200,
+      "$description": "200px — primitive size token. Use via Semantic: Size tokens.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11176:28",
+        "com.figma.scopes": [
+          "CORNER_RADIUS",
+          "WIDTH_HEIGHT",
+          "GAP"
+        ]
+      }
+    },
+    "half": {
+      "$type": "number",
+      "$value": 0.5,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:17169:16",
+        "com.figma.scopes": [
+          "WIDTH_HEIGHT",
+          "GAP",
+          "STROKE_FLOAT"
+        ]
+      }
+    }
+  },
+  "$extensions": {
+    "com.figma.modeName": "Default"
+  }
+}

@@ -1,0 +1,21 @@
+import React, { forwardRef } from 'react';
+import { View, type View as ViewType, type ViewProps } from 'react-native';
+import { useTheme } from '../../theme/ThemeProvider';
+
+export interface {{pascalCase name}}Props extends ViewProps {
+  // TODO: add variant / size props — token-driven only (no raw values).
+}
+
+/** {{purpose}} */
+export const {{pascalCase name}} = forwardRef<ViewType, {{pascalCase name}}Props>(
+  function {{pascalCase name}}({ style, ...rest }, ref) {
+    const t = useTheme();
+    return (
+      <View
+        ref={ref}
+        style={[{ backgroundColor: t.background.surface, borderRadius: t.radius.md }, style]}
+        {...rest}
+      />
+    );
+  },
+);

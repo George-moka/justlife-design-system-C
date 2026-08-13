@@ -1,0 +1,9 @@
+{
+  "name": "eslint-plugin-justlife",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Custom ESLint rules that protect the Justlife Design System (token-only enforcement).",
+  "type": "commonjs",
+  "main": "index.js",
+  "license": "UNLICENSED"
+}

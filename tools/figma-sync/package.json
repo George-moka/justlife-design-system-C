@@ -1,0 +1,10 @@
+{
+  "name": "@justlife/figma-sync",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Sync component inventory / specs / assets from Figma via the REST API.",
+  "type": "module",
+  "scripts": {
+    "inventory": "node inventory.mjs"
+  }
+}

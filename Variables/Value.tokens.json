@@ -1,0 +1,559 @@
+{
+  "font-weight": {
+    "regular": {
+      "$type": "string",
+      "$value": "Regular",
+      "$description": "400 — Regular weight. Body copy, descriptions.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:8",
+        "com.figma.scopes": [
+          "FONT_STYLE"
+        ],
+        "com.figma.type": "string"
+      }
+    },
+    "medium": {
+      "$type": "string",
+      "$value": "Medium",
+      "$description": "500 — Medium weight. Labels, secondary emphasis.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:9",
+        "com.figma.scopes": [
+          "FONT_STYLE"
+        ],
+        "com.figma.type": "string"
+      }
+    },
+    "semibold": {
+      "$type": "string",
+      "$value": "Semi Bold",
+      "$description": "600 — SemiBold weight. Titles, active states. Code: map <b>/<strong> (default 700) to 600.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:10",
+        "com.figma.scopes": [
+          "FONT_STYLE"
+        ],
+        "com.figma.type": "string"
+      }
+    },
+    "extrabold": {
+      "$type": "string",
+      "$value": "Extra Bold",
+      "$description": "NOT in use — Poppins is capped at SemiBold (600) per DS rule.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:12",
+        "com.figma.scopes": [
+          "FONT_STYLE"
+        ],
+        "com.figma.type": "string"
+      }
+    },
+    "black": {
+      "$type": "string",
+      "$value": "Black",
+      "$description": "NOT in use — Poppins is capped at SemiBold (600) per DS rule.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:13",
+        "com.figma.scopes": [
+          "FONT_STYLE"
+        ],
+        "com.figma.type": "string"
+      }
+    }
+  },
+  "font-family": {
+    "poppins": {
+      "$type": "string",
+      "$value": "Poppins",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:14",
+        "com.figma.scopes": [
+          "FONT_FAMILY"
+        ],
+        "com.figma.type": "string"
+      }
+    }
+  },
+  "font-size": {
+    "9": {
+      "$type": "number",
+      "$value": 9,
+      "$description": "9px — minimum mobile compact scale",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11780:2",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ]
+      }
+    },
+    "10": {
+      "$type": "number",
+      "$value": 10,
+      "$description": "10px — very small labels. Counters, secondary micro text.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11372:2",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ]
+      }
+    },
+    "11": {
+      "$type": "number",
+      "$value": 11,
+      "$description": "11px — compact labels. Dense UI elements.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:15",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ]
+      }
+    },
+    "12": {
+      "$type": "number",
+      "$value": 12,
+      "$description": "12px — small body. Secondary descriptions, captions.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:16",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ]
+      }
+    },
+    "13": {
+      "$type": "number",
+      "$value": 13,
+      "$description": "13px — intermediate size between body-sm (12) and body-md (14). Used for label/labelBase.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:12029:2",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ]
+      }
+    },
+    "14": {
+      "$type": "number",
+      "$value": 14,
+      "$description": "14px — default body text. Descriptions, list items.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11372:3",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ]
+      }
+    },
+    "16": {
+      "$type": "number",
+      "$value": 16,
+      "$description": "16px — large body / default title. Primary reading text.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:17",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ]
+      }
+    },
+    "20": {
+      "$type": "number",
+      "$value": 20,
+      "$description": "20px — large title. Section headers.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:18",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ]
+      }
+    },
+    "24": {
+      "$type": "number",
+      "$value": 24,
+      "$description": "24px — small headline. Card titles, modal headers.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:19",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ]
+      }
+    },
+    "28": {
+      "$type": "number",
+      "$value": 28,
+      "$description": "28px — medium headline. Sub-page headers.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:20",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ]
+      }
+    },
+    "32": {
+      "$type": "number",
+      "$value": 32,
+      "$description": "32px — large headline. Page section titles.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:21",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ]
+      }
+    },
+    "36": {
+      "$type": "number",
+      "$value": 36,
+      "$description": "36px — extra large headline.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:22",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ]
+      }
+    },
+    "40": {
+      "$type": "number",
+      "$value": 40,
+      "$description": "40px — headline. Major page titles.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:23",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ]
+      }
+    },
+    "48": {
+      "$type": "number",
+      "$value": 48,
+      "$description": "48px — display. Hero and marketing banners.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:24",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ]
+      }
+    },
+    "56": {
+      "$type": "number",
+      "$value": 56,
+      "$description": "56px — large display.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:25",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ]
+      }
+    },
+    "60": {
+      "$type": "number",
+      "$value": 60,
+      "$description": "60px font size — headline-xl",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11806:2",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ]
+      }
+    },
+    "72": {
+      "$type": "number",
+      "$value": 72,
+      "$description": "72px — maximum display size.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:26",
+        "com.figma.scopes": [
+          "FONT_SIZE"
+        ]
+      }
+    }
+  },
+  "line-height": {
+    "12": {
+      "$type": "number",
+      "$value": 12,
+      "$description": "12px line height — micro text (9–10px).",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11372:4",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "13": {
+      "$type": "number",
+      "$value": 13,
+      "$description": "13px line height — 10–11px text.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11785:2",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "14": {
+      "$type": "number",
+      "$value": 14,
+      "$description": "14px — line height for 11px text.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11372:5",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "15": {
+      "$type": "number",
+      "$value": 15,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:17154:24",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "16": {
+      "$type": "number",
+      "$value": 16,
+      "$description": "16px — line height for 12px text.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:27",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "18": {
+      "$type": "number",
+      "$value": 18,
+      "$description": "18px — line height for 13px text (1.38 ratio).",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:12029:3",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "19": {
+      "$type": "number",
+      "$value": 19,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:17154:23",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "20": {
+      "$type": "number",
+      "$value": 20,
+      "$description": "20px — line height for 14px text.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:28",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "23": {
+      "$type": "number",
+      "$value": 23,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:17154:22",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "24": {
+      "$type": "number",
+      "$value": 24,
+      "$description": "24px — line height for 16px text.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:29",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "28": {
+      "$type": "number",
+      "$value": 28,
+      "$description": "28px — line height for 20px title.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:30",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "30": {
+      "$type": "number",
+      "$value": 30,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:17154:21",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "32": {
+      "$type": "number",
+      "$value": 32,
+      "$description": "32px — line height for 24px headline.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:31",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "34": {
+      "$type": "number",
+      "$value": 34,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:17154:20",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "36": {
+      "$type": "number",
+      "$value": 36,
+      "$description": "36px — line height for 28px headline.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:32",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "37": {
+      "$type": "number",
+      "$value": 37,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:17154:19",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "40": {
+      "$type": "number",
+      "$value": 40,
+      "$description": "40px — line height for 32px headline.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:33",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "44": {
+      "$type": "number",
+      "$value": 44,
+      "$description": "44px — line height for 36px text.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:34",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "45": {
+      "$type": "number",
+      "$value": 45,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:17154:18",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "48": {
+      "$type": "number",
+      "$value": 48,
+      "$description": "48px — line height for 40px headline.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:35",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "56": {
+      "$type": "number",
+      "$value": 56,
+      "$description": "56px — line height for 48px display.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:36",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "58": {
+      "$type": "number",
+      "$value": 58,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:17154:17",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "60": {
+      "$type": "number",
+      "$value": 60,
+      "$description": "60px — line height for 56px display.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:37",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "65": {
+      "$type": "number",
+      "$value": 65,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:17154:16",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "72": {
+      "$type": "number",
+      "$value": 72,
+      "$description": "72px — line height for 60-72px display.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:38",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "80": {
+      "$type": "number",
+      "$value": 80,
+      "$description": "80px — expanded line height.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:39",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    },
+    "88": {
+      "$type": "number",
+      "$value": 88,
+      "$description": "88px — maximum line height.",
+      "$extensions": {
+        "com.figma.variableId": "VariableID:11174:40",
+        "com.figma.scopes": [
+          "LINE_HEIGHT"
+        ]
+      }
+    }
+  },
+  "$extensions": {
+    "com.figma.modeName": "Value"
+  }
+}
