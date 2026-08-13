@@ -1,0 +1,86 @@
+import { Meta, Canvas, Controls, ArgTypes } from '@storybook/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+> This page is the **documentation template** for every Justlife component. Copy
+> these headings (the `pnpm new:component` generator scaffolds them for you).
+
+## Purpose
+
+`Button` is the primary way a user triggers an action — booking, confirming,
+submitting, navigating forward. It composes `Pressable`, `Text`, and `Icon`, and
+is fully tokenised so it adapts to theme and platform automatically.
+
+## Usage
+
+- Use for the **main action** on a screen (`primary`), supporting actions
+  (`secondary`), low-emphasis actions (`outline` / `tertiary`), destructive
+  actions (`destructive`), or compact filter chips (`pill`).
+- Keep labels short and action-led ("Book now", "Confirm", "Add service").
+- One `primary` button per view. Everything else is lower emphasis.
+
+<Canvas of={ButtonStories.Variants} />
+
+## Do not use
+
+- ❌ For navigation that behaves like a link in body text — use a text link.
+- ❌ As a toggle or selection control — use `Chip`, `Toggle`, or `Tabs`.
+- ❌ More than one `primary` button competing in the same view.
+- ❌ With raw colours/sizes — all styling comes from tokens.
+
+## Variants
+
+`primary` · `secondary` · `outline` · `tertiary` · `destructive` · `pill`. Set
+with the `variant` prop.
+
+<Controls />
+
+## States
+
+Default · Pressed (automatic) · Disabled · Loading. Hover/focus rings apply on
+web. `disabled` and `loading` both block `onPress`.
+
+<Canvas of={ButtonStories.States} />
+
+## Sizes
+
+`sm` · `md` · `lg`. All sizes keep a touch target ≥ 44px.
+
+<Canvas of={ButtonStories.Sizes} />
+
+## With icons
+
+<Canvas of={ButtonStories.WithIcons} />
+
+## Accessibility
+
+- Renders with `role="button"` and an accessible name from the label (or
+  `accessibilityLabel` when the child is not a string).
+- `accessibilityState` reflects `disabled` and `busy` (loading).
+- Touch target ≥ 44×44px (iOS HIG / Android Material minimum).
+- Colour pairings use semantic on-colour tokens to maintain contrast in light
+  and dark themes.
+
+## Responsive behaviour
+
+- Intrinsic width by default; pass `fullWidth` to stretch (common on mobile CTAs
+  and inside bottom sheets).
+- Sizing is token-driven, so density scales with the spacing scale.
+
+## Platform notes
+
+- **iOS / Android / Web** share one implementation via `react-native-web`.
+- Press feedback uses `Pressable`'s `pressed` state on every platform.
+- Add a `Button.web.tsx` only if web ever needs divergent behaviour (it does
+  not today).
+
+## Tokens used
+
+`btn.{primary,secondary,outline,tertiary,destructive,pill}.{bg,bgActive,text,ring,border}`,
+`btn.disabled.{bg,text,border}`, `radius.control`, `radius.pill`, `space.*`,
+`size.40`, `touchTarget.min`, `touchTarget.comfortable`, `typography.button`.
+
+<ArgTypes of={ButtonStories} />

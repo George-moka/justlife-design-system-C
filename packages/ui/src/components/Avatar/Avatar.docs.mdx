@@ -1,0 +1,55 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as AvatarStories from './Avatar.stories';
+
+<Meta of={AvatarStories} />
+
+# Avatar
+
+## Purpose
+
+`Avatar` is a circular identity badge that shows a person's **initials**. Justlife does not use profile
+photos, so the avatar is initials-only — derived from a `name` (or set `initials` directly).
+
+## Usage
+
+- Pass `name` and the initials are derived ("Cem Mirkelam" → "CM"); or pass `initials` to override.
+- `size`: `sm` (40) · `md` (56, default) · `lg` (72), or a raw diameter.
+- `tone`: `brand` (light-blue chip, default) or `neutral` (grey chip). Initials stay dark for contrast.
+
+<Canvas of={AvatarStories.Sizes} />
+
+## Do not use
+
+- ❌ For a photo — there are no profile photos in Justlife; use initials.
+- ❌ For a category/professional badge — use `ProfessionalAvatar` (brand shape + cutout photo).
+- ❌ With raw colours/sizes — every value comes from tokens.
+
+## Variants
+
+`tone` brand / neutral; `size` sm / md / lg (or a number).
+
+<Controls />
+
+## States
+
+Stateless — a derived display badge.
+
+<Canvas of={AvatarStories.Tones} />
+
+## Accessibility
+
+Exposed as an `image` whose accessible label is the person's name; the initials glyphs are
+presentational (not announced separately).
+
+## Responsive behavior
+
+Fixed circular diameter from the size token; the initials scale with a matching type-scale variant.
+
+## Platform notes
+
+Pure RN primitives — identical on web (react-native-web) and native.
+
+## Tokens used
+
+`avatar.bg.primary` · `avatar.bg.neutral` · `radius.pill` · `size.40` · `size.56` · `size.72` ·
+`text.primary` · `typography.titleMedium` · `typography.titleLarge` · `typography.headlineSmall`.

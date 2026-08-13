@@ -1,0 +1,90 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as BottomSheetStories from './BottomSheet.stories';
+
+<Meta of={BottomSheetStories} />
+
+# BottomSheet
+
+## Purpose
+
+`BottomSheet` presents a focused, dismissible surface over the current screen for a contained task or
+choice — picking a payment method, confirming a detail, reading a short explainer — without navigating
+away. A dimming scrim pulls focus to the sheet; the screen stays visible behind it for context.
+
+## Usage
+
+- Drop it inside the **screen container** (a positioned parent). It renders as an absolute overlay that
+  fills that parent, so it stays inside a device frame rather than portalling to the document.
+- Gate it with `open`, or conditionally render `<BottomSheet>` yourself.
+- Put the confirming action in the `footer` slot (a full-width `Button`); it clears the home indicator.
+- The scrim and the corner close button both call `onClose`.
+
+<Canvas of={BottomSheetStories.Default} />
+
+## Do not use
+
+- ❌ For a full-screen task or a multi-step flow — navigate to a screen instead.
+- ❌ For transient, non-blocking feedback — use a Toast/Snackbar.
+- ❌ As a permanent panel — a sheet is modal and dismissible by design.
+- ❌ With raw colours/sizes — every value comes from tokens.
+
+## Variants
+
+Composition props rather than visual variants: `footer` (pinned action), `showClose`, `showGrabber`,
+`title`, `titleAction` / `onBack` (step header), `divider`, `titleInset`. See **WithoutFooter**,
+**NoGrabber**, **TitleInsetContent**, **Scrollable**, and **Interactive**.
+
+`titleInset` picks the column the title starts in: `edge` (default, `space.md` — aligned with the body
+gutter, right for plain text, fields or flat rows) or `content` (`space.xl` — aligned with the text
+*inside* a card list, i.e. the 16 gutter plus the card's own 16 padding).
+
+<Canvas of={BottomSheetStories.TitleInsetContent} />
+
+<Controls />
+
+## States
+
+Open (shown) · closed (`open={false}` → renders nothing). The body scrolls when content exceeds the
+capped height; header, footer and corners stay fixed.
+
+<Canvas of={BottomSheetStories.Scrollable} />
+
+## Accessibility
+
+- The scrim is a button labelled **"Dismiss"**; the corner button is labelled **"Close"** — both fire
+  `onClose`, giving keyboard/AT users an explicit exit.
+- Footer actions are real `Button`s with their own roles/labels.
+
+## Responsive behavior
+
+Full-bleed width, anchored to the bottom; height caps at **90%** of the host so the screen stays
+partly visible. Content scrolls within that cap.
+
+## Platform notes
+
+Renders as an in-parent absolute overlay (not a native `Modal`/portal) so it stays contained in device
+frames and previews. No enter/exit animation yet — that lands with drag-to-dismiss gesture support.
+
+## Bottom-sheet rules (tokens)
+
+| Aspect | Token |
+| --- | --- |
+| Top corners (bottom flush) | `radius.2xl` (24) |
+| Scrim | `effects.overlay-default` @ `opacity.40` |
+| Surface elevation | `elevation.sheet` |
+| Grabber handle | `size.40 × size.2`, `radius.pill`, `icon.muted` — inside `space.sm` padding |
+| Corner close button | `size.32` circle, `background.secondary`, `space.md` inset |
+| Title row padding | none on top (the grabber block supplies it) · `space.md` below |
+| Title inset | `space.md` (`edge`) or `space.xl` (`content`) |
+| Body padding | `space.md` — plus `space.md` on top when `divider` re-opens the gap under the hairline |
+| Footer padding | `space.md` |
+| Footer home-indicator inset | `safeArea.bottom` (34) |
+| Max height | 90% of host |
+| Stacking | `zIndex.modal` |
+
+## Tokens used
+
+`radius.2xl` · `radius.pill` · `effects.overlay-default` · `opacity.40` · `elevation.sheet` ·
+`background.primary` · `background.secondary` · `border.default` · `icon.secondary` · `icon.muted` ·
+`space.sm` · `space.md` · `space.xl` · `size.2` · `size.32` · `size.40` · `size.48` · `safeArea.bottom` ·
+`zIndex.modal` · `typography.titleSmall`.
