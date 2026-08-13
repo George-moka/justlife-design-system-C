@@ -1,0 +1,38 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as TabsStories from './Tabs.stories';
+
+<Meta of={TabsStories} />
+
+# Tabs
+
+## Purpose
+
+Underline **section tabs** — equal-width text tabs that switch a region of content (e.g. a Bookings list's
+**Upcoming / Past**). The active tab is brand-coloured with a 2px brand underline over a full-width hairline
+baseline.
+
+## Usage
+
+- Controlled: pass `items` (`{ key, label }[]`), the `activeKey`, and an `onChange` handler.
+
+<Canvas of={TabsStories.Default} />
+
+## Do not use
+
+- ❌ For bordered card-style tabs with subtitles — that's `TabGroup`.
+- ❌ For a small in-place segmented toggle — that's `PillGroup`.
+- ❌ For app-level navigation between screens — that's `BottomNavigation`.
+
+## Variants
+
+Two or three tabs flex to equal widths. Geometry is constant on select (only the underline/label colour
+changes) so there's no layout shift.
+
+## Accessibility
+
+Renders `tablist` / `tab` roles with `accessibilityState.selected` on the active tab.
+
+## Tokens used
+
+`borderWidth.hairline` (baseline) · `size.2` (active underline) · `border.brandDefault` · `text.brand` /
+`text.primary` · `space.sm` · text role `labelMedium` (13 / medium).

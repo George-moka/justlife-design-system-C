@@ -1,0 +1,36 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as PillGroupStories from './PillGroup.stories';
+
+<Meta of={PillGroupStories} />
+
+# PillGroup
+
+## Purpose
+
+A **single-select row of label pills** — Weekly / Every Two Weeks, Yes / No, and similar small either-or
+choices.
+
+## Usage
+
+- Pass `options` (`{ key, label }[]`), the selected `value`, and `onChange`.
+- Composes `Selectable`, so the pills match every other choice control.
+
+<Canvas of={PillGroupStories.Cadence} />
+
+## Do not use
+
+- ❌ For navigation between views — that's `TabGroup`.
+- ❌ For a full-width selectable card — that's `SelectableCard`.
+- ❌ For numbers — that's `NumberSelector`.
+
+## States
+
+Per-pill: default · selected (brand fill). Single-select across the group.
+
+## Accessibility
+
+Each pill is a `Selectable` button labelled by its visible text.
+
+## Tokens used
+
+`size.40` (pill height) · `space.md` (inset) · `space.sm` (gap, via `HStack`) · plus `Selectable`’s tokens.
