@@ -1,0 +1,42 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as SegmentedControlStories from './SegmentedControl.stories';
+
+<Meta of={SegmentedControlStories} />
+
+# SegmentedControl
+
+## Purpose
+
+A compact **single-select** toggle for switching between 2–3 mutually-exclusive views — a **liquid-glass**
+pill track with a **brand pill** on the selected segment. Used in a header (Bookings' Upcoming / Past;
+Wallet's Transactions / Cashback; life+'s Plans / Benefits).
+
+## Usage
+
+- Pass `options` (`{ key, label }[]`), the selected `value`, and `onChange`. It's controlled.
+- Best for **2–3** short segments. For more (or longer labels), use `Tabs` (underline) instead.
+- It sits over content (the glass refracts what's behind it) — pair it with the screen's aurora/header.
+
+<Canvas of={SegmentedControlStories.Playground} />
+
+## Do not use
+
+- ❌ For 4+ segments or long labels — switch to `Tabs`.
+- ❌ For multi-select — that's chips / `PillGroup`.
+- ❌ For a primary action — it's navigation between views, not a CTA.
+
+## Variants
+
+`options` (2–3) · controlled `value` / `onChange`. See **Uses** for Wallet and a three-segment example.
+
+## Accessibility
+
+The track is a `tablist`; each segment is a `tab` carrying `accessibilityState.selected` (→ `aria-selected`).
+A single brand pill **slides** (position + width, motion tokens) to the selected segment; reduce-motion makes it
+jump instead. The pill is decorative (`pointerEvents="none"`).
+
+## Tokens used
+
+`radius.pill` (track + pill) · `background.brandDefault` (selected fill) · `text.onBrand` / `text.primary`
+(label) · `space.md` / `size.6` / `size.2` (padding) · `GlassSurface` (track) · a soft drop shadow
+(`elevation`-style). `labelMedium` type.

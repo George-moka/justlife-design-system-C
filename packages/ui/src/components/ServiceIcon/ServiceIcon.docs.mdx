@@ -1,0 +1,37 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as ServiceIconStories from './ServiceIcon.stories';
+
+<Meta of={ServiceIconStories} />
+
+# ServiceIcon
+
+## Purpose
+
+`ServiceIcon` renders a **3D Justlife service icon** (vacuum = General Cleaning,
+hair dryer = Salon & Spa, …) by `name`. The icons are pulled from the Figma
+service-icon set and shipped as transparent, square PNGs rendered with
+`resizeMode="contain"`, so they sit cleanly on any surface.
+
+## Usage
+
+- Use anywhere a service needs a recognizable glyph — service pickers, the
+  Wallet promo stack, category headers, booking summaries.
+- Set the square footprint with `size` (defaults to `size.40`).
+- A default `accessibilityLabel` is derived from the name; pass `accessibilityLabel=""`
+  to mark the icon decorative when it sits next to a text label.
+
+<Canvas of={ServiceIconStories.Default} />
+
+## Do not use
+
+- ❌ For generic UI glyphs (chevrons, close, info) — use `Icon` (the line-icon set).
+- ❌ At tiny sizes where the 3D detail turns to mush — prefer ≥ 24px.
+- ❌ With raw colours/sizes — the icon art is fixed; only `size` is tunable.
+
+## Catalog
+
+Every service in the set (excludes the Instant / Subscription promo variants):
+
+<Canvas of={ServiceIconStories.Gallery} />
+
+<Controls of={ServiceIconStories.Default} />

@@ -1,0 +1,31 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as StarRatingStories from './StarRating.stories';
+
+<Meta of={StarRatingStories} />
+
+# StarRating
+
+## Purpose
+
+A row of stars — empty stars are a soft grey, filled stars take the rating gold. For showing a score or
+**collecting** one (e.g. rating a completed booking's professional — all grey until the user taps).
+
+## Usage
+
+- Read-only: pass `value` (and optionally `max`, default 5).
+- Input: also pass `onRate(rating)` — each star becomes tappable and calls back with its 1-based value.
+
+<Canvas of={StarRatingStories.Interactive} />
+
+## Do not use
+
+- ❌ For an aggregate average with a count ("4.88 · 27K reviews") — that's `RatingSummary`.
+
+## Accessibility
+
+Read-only renders as an `image` with a "Rated X of N" label; interactive renders each star as a labelled
+button.
+
+## Tokens used
+
+`background.rating` (filled) · `border.default` (empty light grey) · `size.4` (gap / hit-slop) · icon sizes `sm`/`md`/`lg`.

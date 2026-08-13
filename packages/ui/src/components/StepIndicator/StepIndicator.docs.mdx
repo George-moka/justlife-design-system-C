@@ -1,0 +1,53 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as StepIndicatorStories from './StepIndicator.stories';
+
+<Meta of={StepIndicatorStories} />
+
+# StepIndicator
+
+## Purpose
+
+A compact circular **step / progress** indicator: a track ring with a brand arc filled to
+`current / total`, and the current step number in the centre. It tells the user where they are in a
+short, linear flow (a booking funnel, an onboarding) without taking a whole row.
+
+## Usage
+
+- Drop it where space is tight — most often a `Header`'s `aside` slot, right-aligned on the title row.
+- Use for **short, linear** flows (≈ 3–6 steps). Beyond that the number is the signal, not the arc.
+- `current` is 1-based; the arc fills `current / total`.
+
+<Canvas of={StepIndicatorStories.Progression} />
+
+## Do not use
+
+- ❌ For non-linear navigation or tabs — use `Tabs` / a segmented control.
+- ❌ As the only label for a long process — pair with a step title in the header.
+- ❌ With raw colours/sizes — every value comes from tokens.
+
+## Variants & sizing
+
+No visual variants; scale with `size` (default `size.28`).
+
+<Controls />
+<Canvas of={StepIndicatorStories.Sizes} />
+
+## States
+
+The arc length and the centred number reflect `current` / `total`; clamped to `[0, total]`.
+
+## Accessibility
+
+Exposed as an image with an accessible name — **"Step {current} of {total}"** (`role="img"` on web,
+`accessibilityRole="image"` on native) — so the progress is announced even though it's drawn, not text.
+
+## Platform notes
+
+Platform-split: **web** renders a raw `<svg>` (react-native-svg has no web build in this setup);
+**native** uses `react-native-svg` (`Svg` + `Circle` + a rotated `G`), with the number overlaid as an
+RN `Text`. The API is identical across both.
+
+## Tokens used
+
+`size.28` · `borderWidth.thick` · `border.default` (track) · `icon.brand` (arc) · `text.primary`
+(number) · `typography.labelXSmall` (number size, web).

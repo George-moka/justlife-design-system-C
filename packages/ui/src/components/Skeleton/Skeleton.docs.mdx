@@ -1,0 +1,58 @@
+import { Meta, Canvas } from '@storybook/blocks';
+import * as SkeletonStories from './Skeleton.stories';
+
+<Meta of={SkeletonStories} />
+
+# Skeleton
+
+## Purpose
+
+A shimmering **placeholder** for content that's still loading. It holds the page's shape so the layout
+doesn't jump, and the motion signals "working" — which reads as **faster** than a spinner or a blank screen.
+
+## Usage
+
+- Use `Skeleton` for a single block; set `width` / `height` / `radius`, or `circle` for an avatar.
+- Use `SkeletonText` for a paragraph (N lines, the last one short).
+- **Wrap a set in `SkeletonGroup`** — they then share one shimmer clock (sweep in unison) and the region
+  announces a single "Loading" to screen readers.
+- **Be a faithful ghost of the real components.** Take the size, **corner radius, and spacing from the
+  actual elements you're replacing** — not generic shapes. A button ghost uses the button's radius
+  (`radius.md` for the xs card CTA), a status pill uses the badge's `radius.sm`, the card surface uses the
+  card's `radius.default` + padding. Nothing is pill-shaped unless the real element is. This keeps the swap
+  seamless (no layout shift) and on-brand.
+
+<Canvas of={SkeletonStories.BookingCard} />
+
+## Do not use
+
+- ❌ On small, immediately-interactive controls (buttons, inputs, single labels) — a skeleton there implies
+  the control is live when it isn't. Skeletons are for **containers**: cards, tiles, lists, grids.
+- ❌ For very fast loads (under ~300ms) — the flash is more jarring than helpful.
+- ❌ For a one-off action's result — use a `Toast`/inline state.
+
+## Variants
+
+`Skeleton` (block / `circle`) · `SkeletonText` (`lines`, `lastLineWidth`) · `SkeletonGroup` (shared clock +
+busy region). See **Basics**, **BookingCard**, **ListRows**, **Static**.
+
+## Motion
+
+A translucent highlight sweeps **left → right** — the "wave," which research finds is perceived as faster
+than a pulsing fade (and a slow, steady sweep feels faster still). One sweep (~`motion.slow × 4`) then a
+brief off-screen rest, repeating. Driven on the native driver. **Headless preview can't tick the loop**, so
+it shows the resting blocks there — the motion plays on device / a live browser.
+
+## Accessibility
+
+- Individual `Skeleton`s are **decorative** (`aria-hidden`). `SkeletonGroup` is the single
+  `progressbar` / `aria-busy` region with a `label` ("Loading") so assistive tech announces it once, not N
+  times.
+- **Reduce motion:** when the OS setting is on, the shimmer is suppressed and a static block renders.
+
+## Tokens used
+
+`border.default` @ `opacity.60` (soft block fill ≈ #EBEBEB — visible on white but not heavy) ·
+`background.surface` (the sweep highlight) · `radius.sm` default (text-run ghosts) — but each ghost takes the
+**real element's** radius (`radius.md` button, `radius.sm` badge, `radius.default` card/avatar) · `space.sm`
+(line gap) · `motion.duration.slow` (loop timing). Sweep uses the `LinearGradient` primitive (`horizontal`).

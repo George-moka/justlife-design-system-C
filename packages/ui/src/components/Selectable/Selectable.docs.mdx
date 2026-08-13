@@ -1,0 +1,56 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+import * as SelectableStories from './Selectable.stories';
+
+<Meta of={SelectableStories} />
+
+# Selectable
+
+## Purpose
+
+`Selectable` is the low-level **selection chip**: a bordered, centred pressable that fills with brand
+colour when `selected`. It is the **single source of truth** for every small choice affordance in the
+product — number chips, pills, dates, time slots, weekday toggles — so the corner radius
+(`radius.control`) and the selected look stay identical everywhere.
+
+## Usage
+
+- It is **content-agnostic** — pass any `children` and a `style` for sizing (width/height/padding).
+- Selected text should use `text.onBrand`; unselected uses `text.primary`/`text.secondary`.
+- Prefer the higher-level pickers that compose it — `DatePicker`, `TimeSlotPicker`, `WeekdayPicker`,
+  `NumberSelector`, `PillGroup` — and reach for `Selectable` directly only for a one-off chip.
+
+<Canvas of={SelectableStories.States} />
+<Canvas of={SelectableStories.SingleSelectRow} />
+
+## Do not use
+
+- ❌ For a full-width selectable **card** (icon + title + description) — that's `SelectableCard`.
+- ❌ For navigation tabs — that's `TabGroup`.
+- ❌ With raw colours/sizes — every value comes from tokens.
+
+## Variants
+
+Driven by `selected` (brand fill + border) and `disabled` (dimmed, non-interactive). Shape/size come from
+the `style` you pass.
+
+<Controls />
+
+## States
+
+Default · selected (`background.brandDefault` + `border.brandDefault`) · pressed (0.7 opacity) ·
+disabled (`opacity.40`, no press).
+
+## Accessibility
+
+`accessibilityRole="button"` with `accessibilityState={{ selected, disabled }}` (matching `SelectableCard`
+and `TabGroup`). Pass an `accessibilityLabel` when the visible content isn't descriptive (e.g. a bare
+number or single letter). Inside a group, you may pass `accessibilityRole="radio"`/`"checkbox"`.
+
+## Responsive behavior
+
+Sizes to the `style` you give it; lay several out in a `ScrollView`/`HStack` for a row of choices.
+
+## Tokens used
+
+`radius.control` · `borderWidth.thin` · `border.brandDefault` / `border.default` ·
+`background.brandDefault` / `background.primary` · `opacity.40`.
