@@ -54,7 +54,7 @@ const SLIDES: { bg: string; discount: string; headline: string }[] = [
 // image. Vite resolves the import to a string URL; Metro resolves it to a numeric asset id which
 // `Image.resolveAssetSource` turns into a uri. Normalise both to a uri string for the `photo` prop.
 const PRO_PHOTO =
-  typeof profilePicClean === 'string' ? profilePicClean : Image.resolveAssetSource(profilePicClean).uri;
+  typeof profilePicClean === 'string' ? profilePicClean : (Image.resolveAssetSource ? (Image.resolveAssetSource||(()=>({uri:''})))(profilePicClean).uri : '');
 const HERO_H = 448; // the big media carousel — fixed; the page scrolls over it (Figma hero = 448)
 const SECTION_TOP = 412; // where the rounded content section begins (overlaps the hero by 36, tracks HERO_H)
 const PROMO_BOTTOM = 100; // promo block position from the hero bottom (sits above the floating card)

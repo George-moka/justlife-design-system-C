@@ -63,8 +63,8 @@ const NAV: BottomNavItem[] = [
 
 // Bundled pro photos resolve to a URI in BOTH web (Vite → string) and native (Metro → resolveAssetSource),
 // so the same photo shows in Storybook and Expo (same pattern as ThankYouScreen).
-const PHOTO_CLEAN = typeof profilePicClean === 'string' ? profilePicClean : Image.resolveAssetSource(profilePicClean).uri;
-const PHOTO_ASSIST = typeof profilePicAssist === 'string' ? profilePicAssist : Image.resolveAssetSource(profilePicAssist).uri;
+const PHOTO_CLEAN = typeof profilePicClean === 'string' ? profilePicClean : (Image.resolveAssetSource||(()=>({uri:''})))(profilePicClean).uri;
+const PHOTO_ASSIST = typeof profilePicAssist === 'string' ? profilePicAssist : (Image.resolveAssetSource||(()=>({uri:''})))(profilePicAssist).uri;
 
 // Mock data, mapped onto our existing PlanBookingCard (title + status pill, label→value rows, professional
 // with a category-shape avatar + photo cutout, and a primary action). Recurring plan uses `stacked`.

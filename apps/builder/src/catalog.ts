@@ -38,6 +38,10 @@ CATALOG (exact names and their props):
 - "StatusBadge" {children(text), tone?} — small status chip (e.g. Confirmed).
 - "Card" {children} — a plain surface card wrapper.
 
+IMAGE NAMES - for any image prop use EXACTLY one of these ids (never invent a name, never use a description):
+home-cleaning, home-deep-cleaning, womens-salon, womens-spa, ac-cleaning, pest-control, handyman, babysitting, disinfection, furniture-cleaning, home-painting, iv-therapy, lab-tests, packers-movers, pet-grooming, vet-at-home
+Pick the closest match to the service. If nothing matches, omit the image prop entirely.
+
 Return ONLY the JSON object.`;
 
 export function buildUserMessage(prompt: string, currentSpec?: unknown): string {

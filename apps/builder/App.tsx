@@ -1,3 +1,5 @@
+import './rnw-shim';
+import { SCREENS, matchScreen } from './src/screens';
 import React, { useState, useCallback } from 'react';
 import { ScrollView, View, Text, TextInput, Pressable, ActivityIndicator, useWindowDimensions } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
@@ -43,6 +45,7 @@ function Builder() {
   const { width } = useWindowDimensions();
   const [prompt, setPrompt] = useState('');
   const [spec, setSpec] = useState<ScreenSpec | null>(null);
+  const [screenName, setScreenName] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -50,6 +53,9 @@ function Builder() {
     async (text: string, asEdit: boolean) => {
       const p = text.trim();
       if (!p || loading) return;
+      const hit = asEdit ? null : matchScreen(p);
+      if (hit) { setScreenName(hit); setSpec(null); setError(null); setLoading(false); return; }
+      setScreenName(null);
       setLoading(true);
       setError(null);
       try {
@@ -131,13 +137,24 @@ function Builder() {
     </View>
   );
 
+  if (screenName && SCREENS[screenName]) {
+    return (
+      <View style={{ flex: 1 }}>
+        {SCREENS[screenName]()}
+        <Pressable onPress={() => setScreenName(null)} style={{ position: "absolute", right: 16, bottom: 16, zIndex: 9999, backgroundColor: UI.brand, paddingVertical: 10, paddingHorizontal: 18, borderRadius: 999 }}>
+          <Text style={{ color: "#fff", fontFamily: F.sb }}>← Builder</Text>
+        </Pressable>
+      </View>
+    );
+  }
+
   const preview = (
     <View style={{ flex: 1, minWidth: 320, alignItems: 'center', padding: 20 }}>
       <View
         style={{
-          width: 380,
+          width: 430,
           maxWidth: '100%',
-          height: 760,
+          height: 860,
           backgroundColor: '#FFFFFF',
           borderRadius: 40,
           overflow: 'hidden',
@@ -150,12 +167,12 @@ function Builder() {
             <ActivityIndicator color={UI.brand} />
           </View>
         )}
-        {!loading && !spec && (
+        {!loading && !spec && !screenName && (
           <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24 }}>
             <Text style={{ color: UI.muted, textAlign: 'center', fontFamily: F.r }}>Your generated screen appears here</Text>
           </View>
         )}
-        {!loading && spec && (
+        {!loading && spec && !screenName && (
           <ScrollView contentContainerStyle={{ gap: 14, padding: 16 }}>
             {spec.nodes.map((n, i) => renderNode(n, i))}
           </ScrollView>
@@ -175,13 +192,14 @@ function Builder() {
 }
 
 export default function App() {
-  const [fontsLoaded] = useFonts({
-    Poppins_400Regular,
-    Poppins_500Medium,
-    Poppins_600SemiBold,
-    Poppins_700Bold,
-  });
-  if (!fontsLoaded) return null;
+  if (typeof document !== "undefined" && !document.getElementById("jl-poppins")) {
+    const l = document.createElement("link"); l.id = "jl-poppins"; l.rel = "stylesheet";
+    l.href = "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap";
+    document.head.appendChild(l);
+    const st = document.createElement("style");
+    st.textContent = "[style*=Poppins]{font-family:Poppins,system-ui,sans-serif!important}";
+    document.head.appendChild(st);
+  }
   return (
     <SafeAreaProvider>
       <ThemeProvider>
